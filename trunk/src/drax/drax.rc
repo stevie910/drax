@@ -1,0 +1,645 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "mainframe.ico"
+IDR_MOVIE               ICON                    "movie.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR 16, 16
+BEGIN
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_CHAPTER_ADD
+    BUTTON      ID_CHAPTER_REMOVE
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "mainframe.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,6,4,0
+ PRODUCTVERSION 1,6,4,0
+ FILEFLAGSMASK 0x17L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004b0"
+        BEGIN
+            VALUE "FileDescription", "drax"
+            VALUE "FileVersion", "1.6.4.0"
+            VALUE "InternalName", "drax"
+            VALUE "LegalCopyright", "Copyright (C) 2008-2011"
+            VALUE "OriginalFilename", "drax.exe"
+            VALUE "ProductName", "Anwendung drax"
+            VALUE "ProductVersion", "1.6.4.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1200
+    END
+END
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// German (Germany) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// PICTURE
+//
+
+IDR_DONATE              PICTURE                 "donate-de.gif"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_INFO DIALOGEX 0, 0, 236, 111
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Info"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,93,90,50,14
+    ICON            IDR_MAINFRAME,IDC_STATIC,7,7,20,20
+    LTEXT           "Drax Version 1.6.4.0\nM4V Meta Editor\n\nCopyright (C) 2008-2011\nWritten by Stephan Arlt",IDC_STATIC,38,7,100,40
+    PUSHBUTTON      "drax.codeplex.com",IDC_BUTTON_SITE,38,52,100,14
+    PUSHBUTTON      "Jetzt spenden",IDC_BUTTON_DONATE,152,33,50,14
+END
+
+IDD_CHAPTER DIALOGEX 0, 0, 208, 63
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Kapitel"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Zeit",IDC_STATIC,7,7,25,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_TIME,50,7,75,12,ES_AUTOHSCROLL
+    LTEXT           "Name",IDC_STATIC,7,23,25,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_NAME,50,23,151,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,97,42,50,14
+    PUSHBUTTON      "Abbrechen",IDCANCEL,151,42,50,14
+END
+
+IDD_FORMAT DIALOGEX 0, 0, 174, 137
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Format"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Bitte Dateiformat auswählen:",IDC_STATIC,39,7,94,8
+    CONTROL         "00:00:00.000 Chapter 1\n00:00:01.000 Chapter 2",IDC_RADIO_FORMAT1,
+                    "Button",BS_AUTORADIOBUTTON | BS_PUSHLIKE | BS_MULTILINE | WS_GROUP,7,20,160,40
+    CONTROL         "CHAPTER01=00:00:00.000\nCHAPTER01NAME=Chapter 1\nCHAPTER02=00:00:01.000\nCHAPTER02NAME=Chapter 2",IDC_RADIO_FORMAT2,
+                    "Button",BS_AUTORADIOBUTTON | BS_PUSHLIKE | BS_MULTILINE,7,65,160,40
+    DEFPUSHBUTTON   "OK",IDOK,34,116,50,14
+    PUSHBUTTON      "Abbrechen",IDCANCEL,88,116,50,14
+END
+
+IDD_DONATION DIALOGEX 0, 0, 250, 112
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Spende"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Drax ist Donationware\n\nWenn Sie Drax mögen, erwägen Sie bitte eine Spende über PayPal!\nSie können auch jederzeit auf ""Spenden..."" im Hilfe-Menü klicken.",IDC_STATIC,7,7,236,40
+    PUSHBUTTON      "Später spenden",IDC_BUTTON_LATER,23,91,100,14
+    DEFPUSHBUTTON   "Jetzt spenden",IDC_BUTTON_NOW,101,69,60,14
+    PUSHBUTTON      "Ich habe bereits gespendet",IDC_BUTTON_ALREADY,126,91,100,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_INFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        TOPMARGIN, 7
+    END
+
+    IDD_CHAPTER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        TOPMARGIN, 7
+    END
+
+    IDD_FORMAT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 167
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 130
+    END
+
+    IDD_DONATION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 243
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 105
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "&Datei"
+    BEGIN
+        MENUITEM "Ö&ffnen...\tStrg+O",          ID_FILE_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "&Beenden\tAlt+F4",            ID_APP_EXIT
+    END
+    POPUP "&Ansicht"
+    BEGIN
+        MENUITEM "&Symbolleiste",               ID_VIEW_TOOLBAR
+        MENUITEM "Status&leiste",               ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Hilfe"
+    BEGIN
+        MENUITEM "Spenden...",                  ID_HELP_DONATE
+        MENUITEM "Über Drax...",                ID_APP_ABOUT
+    END
+END
+
+IDR_MOVIE MENU
+BEGIN
+    POPUP "&Datei"
+    BEGIN
+        MENUITEM "Ö&ffnen...\tStrg+O",          ID_FILE_OPEN
+        MENUITEM "&Speichern\tStrg+S",          ID_FILE_SAVE
+        MENUITEM SEPARATOR
+        MENUITEM "Kapitel importieren...",      ID_FILE_IMPORT_CHAPTERS
+        MENUITEM "Kapitel exportieren...",      ID_FILE_EXPORT_CHAPTERS
+        MENUITEM SEPARATOR
+        MENUITEM "Optimieren...",               ID_FILE_OPTIMIZE
+        MENUITEM SEPARATOR
+        MENUITEM "&Beenden\tAlt+F4",            ID_APP_EXIT
+    END
+    POPUP "&Bearbeiten"
+    BEGIN
+        MENUITEM "Auss&chneiden\tStrg+X",       ID_EDIT_CUT
+        MENUITEM "&Kopieren\tStrg+C",           ID_EDIT_COPY
+        MENUITEM "&Einfügen\tStrg+V",           ID_EDIT_PASTE
+    END
+    POPUP "&Ansicht"
+    BEGIN
+        MENUITEM "&Symbolleiste",               ID_VIEW_TOOLBAR
+        MENUITEM "Status&leiste",               ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Kapitel"
+    BEGIN
+        MENUITEM "Hinzufügen...",               ID_CHAPTER_ADD
+        MENUITEM "Bearbeiten...",               ID_CHAPTER_EDIT
+        MENUITEM "Entfernen...",                ID_CHAPTER_REMOVE
+    END
+    POPUP "&Hilfe"
+    BEGIN
+        MENUITEM "Spenden...",                  ID_HELP_DONATE
+        MENUITEM "Über Drax...",                ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "Drax"
+    IDR_MOVIE               "\nFilm\n\nM4V-Filme (*.m4v)\n.m4v\n\n"
+    IDS_INFORMATION         "Informationen"
+    IDS_CHAPTERS            "Kapitel"
+    IDS_ID                  "ID"
+    IDS_TIME                "Zeit"
+    IDS_NAME                "Name"
+    IDS_ERROR_FILE          "Die M4V-Datei konnte nicht gelesen bzw. geändert werden!"
+    IDS_ERROR_VIDEO_TRACK   "Die Video-Spur wurde nicht gefunden!"
+    IDS_ERROR_CHAPTER_TRACK "Die Kapitel-Spur wurde nicht gefunden!"
+    IDS_ERROR_CHAPTERS      "Die Anzahl der Kapitel konnte nicht ermittelt werden!"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_ERROR_CHAPTER       "Das Kapitel konnte nicht gelesen bzw. geändert werden!"
+    IDS_ERROR_TIMESTAMP     "Problem mit dem Zeitstempel eines Kapitels!"
+    IDS_ERROR_DURATION      "Problem mit der Dauer eines Kapitels!"
+    IDS_ERROR_CHAPTER_MODIFY_FIRST_ADD 
+                            "Das erste Kapitel kann nicht hinzugefügt werden! Bitte verwenden Sie einen Zeitstempel von 00:00:00.000."
+    IDS_ERROR_CHAPTER_MODIFY_FIRST_EDIT 
+                            "Das erste Kapitel kann nicht bearbeitet werden! Bitte verwenden Sie einen Zeitstempel von 00:00:00.000."
+    IDS_ERROR_CHAPTER_MODIFY_FIRST_REMOVE 
+                            "Das erste Kapitel kann nicht entfernt werden! Bitte entfernen Sie vorher alle weiteren Kapitel."
+    IDS_ERROR_CHAPTER_MODIFY_DURATION_FULL 
+                            "Die Zeit des Kapitels überschreitet die Dauer des Films!"
+    IDS_ERROR_CHAPTER_MODIFY_NAME_EMPTY "Der Name des Kapitels ist leer!"
+    IDS_ERROR_CHAPTER_MODIFY_TIME 
+                            "Es existiert bereits ein Kapitel mit dieser Zeit!"
+    IDS_ERROR_CHAPTER_MODIFY_NAME 
+                            "Es existiert bereits ein Kapitel mit diesem Namen!"
+    IDS_ERROR_OPTIMIZE_EQUAL "Der Quell- und Zieldateiname ist gleich!"
+    IDS_WARNING_OPTIMIZE    "Die Dauer der Optimierung ist abhängig von der Dateigröße.\nBitte warten Sie bis der Prozess abgeschlossen ist!"
+    IDS_INFO_OPTIMIZE       "Die Optimierung war erfolgreich!"
+    IDS_ERROR_OPTIMIZE      "Die Optimierung war nicht erfolgreich!"
+    IDS_FILTER_TXT          "Text-Dateien (*.txt)|*.txt||"
+    IDS_QUESTION_IMPORT_CHAPTERS 
+                            "Möchten Sie wirklich neue Kapitel importieren?\nDie bestehenden Kapitel werden dadurch gelöscht."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_INFO_IMPORT_CHAPTERS "Der Import war erfolgreich!"
+    IDS_ERROR_IMPORT_CHAPTERS "Der Import war nicht erfolgreich!"
+    IDS_INFO_EXPORT_CHAPTERS "Der Export war erfolgreich!"
+    IDS_ERROR_EXPORT_CHAPTERS "Der Export war nicht erfolgreich!"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_IDLEMESSAGE     "Bereit"
+END
+
+STRINGTABLE
+BEGIN
+    ID_CHAPTER_ADD          "Fügt ein neues Kapitel hinzu.\nHinzufügen"
+    ID_CHAPTER_EDIT         "Bearbeitet ein bestehendes Kapitel.\nBearbeiten"
+    ID_CHAPTER_REMOVE       "Entfernt ein bestehendes Kapitel.\nEntfernen"
+    ID_FILE_OPTIMIZE        "Optimiert den Aufbau einer M4V-Datei.\nOptimieren"
+    ID_FILE_IMPORT_CHAPTERS "Importiert Kapitel aus einer Text-Datei."
+    ID_FILE_EXPORT_CHAPTERS "Exportiert Kapitel in eine Text-Datei."
+END
+
+#endif    // German (Germany) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// PICTURE
+//
+
+IDR_DONATE              PICTURE                 "donate-en.gif"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CHAPTER DIALOGEX 0, 0, 208, 63
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Chapter"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Time",IDC_STATIC,7,7,25,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_TIME,50,7,75,12,ES_AUTOHSCROLL
+    LTEXT           "Name",IDC_STATIC,7,23,25,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_NAME,50,23,151,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,97,42,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,151,42,50,14
+END
+
+IDD_INFO DIALOGEX 0, 0, 236, 111
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Info"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,93,90,50,14
+    ICON            IDR_MAINFRAME,IDC_STATIC,7,7,20,20
+    LTEXT           "Drax Version 1.6.4.0\nM4V Meta Editor\n\nCopyright (C) 2008-2011\nWritten by Stephan Arlt",IDC_STATIC,38,7,100,40
+    PUSHBUTTON      "drax.codeplex.com",IDC_BUTTON_SITE,38,52,100,14
+    PUSHBUTTON      "Donate now",IDC_BUTTON_DONATE,152,33,50,14
+END
+
+IDD_FORMAT DIALOGEX 0, 0, 174, 137
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Format"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Please select file format:",IDC_STATIC,39,7,80,8
+    CONTROL         "00:00:00.000 Chapter 1\n00:00:01.000 Chapter 2",IDC_RADIO_FORMAT1,
+                    "Button",BS_AUTORADIOBUTTON | BS_PUSHLIKE | BS_MULTILINE | WS_GROUP,7,20,160,40
+    CONTROL         "CHAPTER01=00:00:00.000\nCHAPTER01NAME=Chapter 1\nCHAPTER02=00:00:01.000\nCHAPTER02NAME=Chapter 2",IDC_RADIO_FORMAT2,
+                    "Button",BS_AUTORADIOBUTTON | BS_PUSHLIKE | BS_MULTILINE,7,65,160,40
+    DEFPUSHBUTTON   "OK",IDOK,34,116,50,14
+    PUSHBUTTON      "Abbrechen",IDCANCEL,88,116,50,14
+END
+
+IDD_DONATION DIALOGEX 0, 0, 250, 112
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Donation"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Drax is Donationware\n\nIf you like Drax, please do consider making a donation via PayPal.\nYou can always choose ""Donate..."" from the Help menu.",IDC_STATIC,7,7,236,40
+    PUSHBUTTON      "Donate later",IDC_BUTTON_LATER,23,91,100,14
+    DEFPUSHBUTTON   "Donate now",IDC_BUTTON_NOW,101,69,60,14
+    PUSHBUTTON      "I have already donated",IDC_BUTTON_ALREADY,126,91,100,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_CHAPTER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        TOPMARGIN, 7
+    END
+
+    IDD_INFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        TOPMARGIN, 7
+    END
+
+    IDD_FORMAT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 167
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 130
+    END
+
+    IDD_DONATION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 243
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 105
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "Open...\tStrg+O",             ID_FILE_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit\tAlt+F4",               ID_APP_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "Donate...",                   ID_HELP_DONATE
+        MENUITEM "About Drax...",               ID_APP_ABOUT
+    END
+END
+
+IDR_MOVIE MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "Open...\tStrg+O",             ID_FILE_OPEN
+        MENUITEM "Save\tStrg+S",                ID_FILE_SAVE
+        MENUITEM SEPARATOR
+        MENUITEM "Import Chapters...",          ID_FILE_IMPORT_CHAPTERS
+        MENUITEM "Export Chapters...",          ID_FILE_EXPORT_CHAPTERS
+        MENUITEM SEPARATOR
+        MENUITEM "Optimize...",                 ID_FILE_OPTIMIZE
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit\tAlt+F4",               ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "C&ut\tStrg+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tStrg+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tStrg+V",              ID_EDIT_PASTE
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Chapter"
+    BEGIN
+        MENUITEM "Add...",                      ID_CHAPTER_ADD
+        MENUITEM "Edit...",                     ID_CHAPTER_EDIT
+        MENUITEM "Remove...",                   ID_CHAPTER_REMOVE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "Donate...",                   ID_HELP_DONATE
+        MENUITEM "About Drax...",               ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "Drax"
+    IDR_MOVIE               "\nMovie\n\nM4V Movies (*.m4v)\n.m4v\n\n"
+    IDS_INFORMATION         "Information"
+    IDS_CHAPTERS            "Chapters"
+    IDS_ID                  "ID"
+    IDS_TIME                "Time"
+    IDS_NAME                "Name"
+    IDS_ERROR_FILE          "Cannot read or modify M4V File."
+    IDS_ERROR_VIDEO_TRACK   "Cannot find video track."
+    IDS_ERROR_CHAPTER_TRACK "Cannot find chapter track."
+    IDS_ERROR_CHAPTERS      "Cannot determine number of chapters."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_ERROR_CHAPTER       "Cannot read or modify chapter."
+    IDS_ERROR_TIMESTAMP     "Timestamp error."
+    IDS_ERROR_DURATION      "Duration error."
+    IDS_ERROR_CHAPTER_MODIFY_FIRST_ADD 
+                            "Cannot add the first chapter! Please use a chapter time of 00:00:00.000."
+    IDS_ERROR_CHAPTER_MODIFY_FIRST_EDIT 
+                            "Cannot edit the first chapter! Please use a chapter time of 00:00:00.000."
+    IDS_ERROR_CHAPTER_MODIFY_FIRST_REMOVE 
+                            "Cannot delete the first chapter! Please remove all further chapters first."
+    IDS_ERROR_CHAPTER_MODIFY_DURATION_FULL 
+                            "The time of the chapter exceeds the duration of the movie!"
+    IDS_ERROR_CHAPTER_MODIFY_NAME_EMPTY "The name of the chapter is empty!"
+    IDS_ERROR_CHAPTER_MODIFY_TIME "The time of the chapter already exists!"
+    IDS_ERROR_CHAPTER_MODIFY_NAME "The name of the chapter already exists!"
+    IDS_ERROR_OPTIMIZE_EQUAL 
+                            "The source filename and the destination filename is equal!"
+    IDS_WARNING_OPTIMIZE    "The duration of the optimization depends on the filesize.\nPlease wait until the process is finished!"
+    IDS_INFO_OPTIMIZE       "The optimization was successful!"
+    IDS_ERROR_OPTIMIZE      "The optimization was not successful!"
+    IDS_FILTER_TXT          "Text Files (*.txt)|*.txt||"
+    IDS_QUESTION_IMPORT_CHAPTERS 
+                            "Do you really want import new chapters?\nAll existing chapters will be deleted."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_INFO_IMPORT_CHAPTERS "The import was successful!"
+    IDS_ERROR_IMPORT_CHAPTERS "The import was not successful!"
+    IDS_INFO_EXPORT_CHAPTERS "The export was successful!"
+    IDS_ERROR_EXPORT_CHAPTERS "The export was not successful!"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE
+BEGIN
+    ID_CHAPTER_ADD          "Adds a new chapter.\nAdd"
+    ID_CHAPTER_EDIT         "Edits an existing chapter.\nEdit"
+    ID_CHAPTER_REMOVE       "Removes an existing chapter.\nRemove"
+    ID_FILE_OPTIMIZE        "Optimize the layout of an M4V file.\nOptimize"
+    ID_FILE_IMPORT_CHAPTERS "Import chapters from a text file."
+    ID_FILE_EXPORT_CHAPTERS "Export chapters to a text file."
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
