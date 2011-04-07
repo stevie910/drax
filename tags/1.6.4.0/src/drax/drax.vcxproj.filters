@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Application">
+      <UniqueIdentifier>{11e95bec-445b-4f18-82b6-5668b5fe1363}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Views">
+      <UniqueIdentifier>{c3c6c0d9-6abc-43a5-8658-06629cb72a37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Dialogs">
+      <UniqueIdentifier>{cc9bd079-a048-4fb9-a808-639a19502cc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Helpers">
+      <UniqueIdentifier>{86e0a674-be79-41cc-ba92-75a9de94b05a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Entities">
+      <UniqueIdentifier>{c799f7a4-15a8-4238-ab9e-e30d7ab7639a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Resources">
+      <UniqueIdentifier>{5bc4dc04-6294-4cb4-adb0-8b24f9ab0d9c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Application.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="ChildFrame.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrame.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="MovieDoc.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="ChaptersView.cpp">
+      <Filter>Application\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="InformationView.cpp">
+      <Filter>Application\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="MovieView.cpp">
+      <Filter>Application\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="ChapterDlg.cpp">
+      <Filter>Application\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="FormatDlg.cpp">
+      <Filter>Application\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="InfoDlg.cpp">
+      <Filter>Application\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="CmdLineParser.cpp">
+      <Filter>Application\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="Picture.cpp">
+      <Filter>Application\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeSpanEx.cpp">
+      <Filter>Application\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="Chapter.cpp">
+      <Filter>Application\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp" />
+    <ClCompile Include="DonationDlg.cpp">
+      <Filter>Application\Dialogs</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Application.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="ChildFrame.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrame.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="MovieDoc.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="ChaptersView.h">
+      <Filter>Application\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="InformationView.h">
+      <Filter>Application\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="MovieView.h">
+      <Filter>Application\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="ChapterDlg.h">
+      <Filter>Application\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="FormatDlg.h">
+      <Filter>Application\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="InfoDlg.h">
+      <Filter>Application\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="CmdLineParser.h">
+      <Filter>Application\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="Picture.h">
+      <Filter>Application\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeSpanEx.h">
+      <Filter>Application\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="TypedPtrArrayEx.hpp">
+      <Filter>Application\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="Chapter.h">
+      <Filter>Application\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Application\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="DonationDlg.h">
+      <Filter>Application\Dialogs</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="donate-de.gif">
+      <Filter>Application\Resources</Filter>
+    </None>
+    <None Include="donate-en.gif">
+      <Filter>Application\Resources</Filter>
+    </None>
+    <None Include="mainframe.bmp">
+      <Filter>Application\Resources</Filter>
+    </None>
+    <None Include="mainframe.ico">
+      <Filter>Application\Resources</Filter>
+    </None>
+    <None Include="movie.ico">
+      <Filter>Application\Resources</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="drax.rc">
+      <Filter>Application\Resources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
