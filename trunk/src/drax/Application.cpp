@@ -54,6 +54,8 @@ END_MESSAGE_MAP()
 //////////////////////////////////////////////////////////////////////////////
 BOOL CApplication::InitInstance()
 {
+	CWinApp::InitInstance();
+
 	// set registry key
 	SetRegistryKey(_T("drax"));
 	CleanState();

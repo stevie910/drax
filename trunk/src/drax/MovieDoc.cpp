@@ -613,11 +613,16 @@ BOOL CMovieDoc::ImportChapters(LPCTSTR ppszPathName, int piFormat)
 		m_kChapters.RemoveAll();
 
 		// open file
-		CStdioFile lkFile(ppszPathName, CStdioFile::modeRead);
+		FILE *lptFile = _tfopen(ppszPathName, _T("r, ccs=UTF-8"));
+		CStdioFile lkFile(lptFile);
 
 		// read chapters
 		CString lsLine; CStringArray lkLines;
-		while ( lkFile.ReadString(lsLine) ) lkLines.Add(lsLine);
+		while ( lkFile.ReadString(lsLine) )
+			lkLines.Add(lsLine);
+
+		// close file
+		lkFile.Close();
 
 		// select format
 		switch ( piFormat )
@@ -752,7 +757,8 @@ BOOL CMovieDoc::ExportChaptersFormat1(LPCTSTR ppszPathName)
 	try
 	{
 		// open file
-		CStdioFile lkFile(ppszPathName, CStdioFile::modeCreate|CStdioFile::modeWrite);
+		FILE *lptFile = _tfopen(ppszPathName, _T("w, ccs=UTF-8"));
+		CStdioFile lkFile(lptFile);
 
 		for ( int i = 0; i < m_kChapters.GetSize(); i++ )
 		{
@@ -764,6 +770,9 @@ BOOL CMovieDoc::ExportChaptersFormat1(LPCTSTR ppszPathName)
 			lsChapter.Format(_T("%s %s\n"), lpkChapter->m_kTime.ToString(), lpkChapter->m_sName);
 			lkFile.WriteString(lsChapter);
 		}
+
+		// close file
+		lkFile.Close();
 	}
 	catch ( CFileException *e )
 	{
@@ -783,7 +792,8 @@ BOOL CMovieDoc::ExportChaptersFormat2(LPCTSTR ppszPathName)
 	try
 	{
 		// open file
-		CStdioFile lkFile(ppszPathName, CStdioFile::modeCreate|CStdioFile::modeWrite);
+		FILE *lptFile = _tfopen(ppszPathName, _T("w, ccs=UTF-8"));
+		CStdioFile lkFile(lptFile);
 
 		for ( int i = 0; i < m_kChapters.GetSize(); i++ )
 		{
@@ -795,6 +805,9 @@ BOOL CMovieDoc::ExportChaptersFormat2(LPCTSTR ppszPathName)
 			lsChapter.Format(_T("CHAPTER%02d=%s\nCHAPTER%02dNAME=%s\n"), (i + 1), lpkChapter->m_kTime.ToString(), (i + 1), lpkChapter->m_sName);
 			lkFile.WriteString(lsChapter);
 		}
+
+		// close file
+		lkFile.Close();
 	}
 	catch ( CFileException *e )
 	{
