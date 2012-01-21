@@ -78,8 +78,8 @@ IDR_MAINFRAME           BITMAP                  "mainframe.bmp"
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 1,6,4,0
- PRODUCTVERSION 1,6,4,0
+ FILEVERSION 1,6,5,0
+ PRODUCTVERSION 1,6,5,0
  FILEFLAGSMASK 0x17L
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -95,12 +95,12 @@ BEGIN
         BLOCK "000004b0"
         BEGIN
             VALUE "FileDescription", "drax"
-            VALUE "FileVersion", "1.6.4.0"
+            VALUE "FileVersion", "1.6.5.0"
             VALUE "InternalName", "drax"
-            VALUE "LegalCopyright", "Copyright (C) 2008-2011"
+            VALUE "LegalCopyright", "Copyright (C) 2008-2012"
             VALUE "OriginalFilename", "drax.exe"
             VALUE "ProductName", "Anwendung drax"
-            VALUE "ProductVersion", "1.6.4.0"
+            VALUE "ProductVersion", "1.6.5.0"
         END
     END
     BLOCK "VarFileInfo"
@@ -165,7 +165,7 @@ FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     DEFPUSHBUTTON   "OK",IDOK,93,90,50,14
     ICON            IDR_MAINFRAME,IDC_STATIC,7,7,20,20
-    LTEXT           "Drax Version 1.6.4.0\nM4V Meta Editor\n\nCopyright (C) 2008-2011\nWritten by Stephan Arlt",IDC_STATIC,38,7,100,40
+    LTEXT           "Drax Version 1.6.5.0\nM4V Meta Editor\n\nCopyright (C) 2008-2012\nWritten by Stephan Arlt",IDC_STATIC,38,7,100,40
     PUSHBUTTON      "drax.codeplex.com",IDC_BUTTON_SITE,38,52,100,14
     PUSHBUTTON      "Jetzt spenden",IDC_BUTTON_DONATE,152,33,50,14
 END
@@ -425,7 +425,7 @@ FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     DEFPUSHBUTTON   "OK",IDOK,93,90,50,14
     ICON            IDR_MAINFRAME,IDC_STATIC,7,7,20,20
-    LTEXT           "Drax Version 1.6.4.0\nM4V Meta Editor\n\nCopyright (C) 2008-2011\nWritten by Stephan Arlt",IDC_STATIC,38,7,100,40
+    LTEXT           "Drax Version 1.6.5.0\nM4V Meta Editor\n\nCopyright (C) 2008-2012\nWritten by Stephan Arlt",IDC_STATIC,38,7,100,40
     PUSHBUTTON      "drax.codeplex.com",IDC_BUTTON_SITE,38,52,100,14
     PUSHBUTTON      "Donate now",IDC_BUTTON_DONATE,152,33,50,14
 END
