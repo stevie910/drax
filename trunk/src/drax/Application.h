@@ -7,6 +7,8 @@
 
 #pragma once
 
+#include "CmdLineParser.h"
+
 class CApplication : public CWinAppEx
 {
 public:
@@ -37,6 +39,14 @@ protected:
 	afx_msg void OnUpdateFileExportChapters(CCmdUI *ppkCmdUI);
 	afx_msg void OnAppAbout();
 	afx_msg void OnHelpDonate();
+
+	//////////////////////////////////////////////////////////////////////////////
+	// Command-line parsing
+	//////////////////////////////////////////////////////////////////////////////	
+	
 	BOOL ParseCommandLine();
+	BOOL ParseCommandLineForFileAction(CCmdLineParser &pkCmdLineParser);
+	BOOL ParseCommandLineForFolderAction(CCmdLineParser &pkCmdLineParser);
+
 	DECLARE_MESSAGE_MAP()
 };

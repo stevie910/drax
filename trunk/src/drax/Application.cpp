@@ -17,8 +17,6 @@
 #include "FormatDlg.h"
 #include "DonationDlg.h"
 
-#include "CmdLineParser.h"
-
 // the application object
 CApplication mkApp;
 
@@ -254,6 +252,7 @@ void CApplication::OnHelpDonate()
 	ShellExecute(NULL, _T("OPEN"), DONATION_URL, NULL, NULL, SW_SHOW);
 }
 
+
 //////////////////////////////////////////////////////////////////////////////
 // 
 //////////////////////////////////////////////////////////////////////////////
@@ -264,14 +263,30 @@ BOOL CApplication::ParseCommandLine()
 
 	// do command line arguments exist?
 	if ( lkCmdLineParser.getVals().empty() )
-		return TRUE;
+		return TRUE; // show regular main window
 
+	// find "file"
+	if ( lkCmdLineParser.HasVal(_T("file")) )
+		return ParseCommandLineForFileAction(lkCmdLineParser);
+
+	// find "folder"
+	if ( lkCmdLineParser.HasVal(_T("folder")) )
+		return ParseCommandLineForFolderAction(lkCmdLineParser);
+
+	return FALSE;
+}
+
+//////////////////////////////////////////////////////////////////////////////
+// 
+//////////////////////////////////////////////////////////////////////////////
+BOOL CApplication::ParseCommandLineForFileAction(CCmdLineParser &pkCmdLineParser)
+{
 	CCmdLineParser_String lsValue;
 	CMovieDoc *lpkDoc = NULL;
 	BOOL lbDoSave = FALSE;
 
 	// find "file"
-	if ( !lkCmdLineParser.GetVal(_T("file"), lsValue) )
+	if ( !pkCmdLineParser.GetVal(_T("file"), lsValue) )
 		return FALSE;
 
 	// open "file"
@@ -280,161 +295,154 @@ BOOL CApplication::ParseCommandLine()
 		return FALSE;
 
 	//////////////////////////////////////////////////////////////////////////////
-	// various
-	//////////////////////////////////////////////////////////////////////////////
-
-	// optimize
-	if ( lkCmdLineParser.GetVal(_T("optimize"), lsValue) )
-	{
-		if ( !MP4Optimize(CW2A(lpkDoc->GetPathName()), CW2A(lsValue)) )
-			AfxMessageBox(IDS_ERROR_OPTIMIZE, MB_ICONERROR);
-	}
-
-	//////////////////////////////////////////////////////////////////////////////
 	// tags
 	//////////////////////////////////////////////////////////////////////////////
 
 	// Album
-	if ( lkCmdLineParser.GetVal(_T("album"), lsValue) )
+	if ( pkCmdLineParser.GetVal(_T("album"), lsValue) )
 	{
 		lpkDoc->m_pkAlbum->SetValue(COleVariant(lsValue));
 		lbDoSave = TRUE;
 	}
 
 	// Album Artist
-	if ( lkCmdLineParser.GetVal(_T("album_artist"), lsValue) )
+	if ( pkCmdLineParser.GetVal(_T("album_artist"), lsValue) )
 	{
 		lpkDoc->m_pkAlbumArtist->SetValue(COleVariant(lsValue));
 		lbDoSave = TRUE;
 	}
 
 	// Artist
-	if ( lkCmdLineParser.GetVal(_T("artist"), lsValue) )
+	if ( pkCmdLineParser.GetVal(_T("artist"), lsValue) )
 	{
 		lpkDoc->m_pkArtist->SetValue(COleVariant(lsValue));
 		lbDoSave = TRUE;
 	}
 
 	// Comment
-	if ( lkCmdLineParser.GetVal(_T("comments"), lsValue) )
+	if ( pkCmdLineParser.GetVal(_T("comments"), lsValue) )
 	{
 		lpkDoc->m_pkComments->SetValue(COleVariant(lsValue));
 		lbDoSave = TRUE;
 	}
 
 	// Composer
-	if ( lkCmdLineParser.GetVal(_T("composer"), lsValue) )
+	if ( pkCmdLineParser.GetVal(_T("composer"), lsValue) )
 	{
 		lpkDoc->m_pkComposer->SetValue(COleVariant(lsValue));
 		lbDoSave = TRUE;
 	}
 	
 	// Compilation
-	if ( lkCmdLineParser.GetVal(_T("compilation"), lsValue) )
+	if ( pkCmdLineParser.GetVal(_T("compilation"), lsValue) )
 	{
 		lpkDoc->m_pkCompilation->SetValue(COleVariant((short)_wtoi(lsValue.GetString()), VT_BOOL));
 		lbDoSave = TRUE;
 	}
 
 	// Disk
-	if ( lkCmdLineParser.GetVal(_T("disk"), lsValue) )
+	if ( pkCmdLineParser.GetVal(_T("disk"), lsValue) )
 	{
 		lpkDoc->m_pkDisk->SetValue(COleVariant((long)_wtoi(lsValue.GetString()), VT_UI4));
 		lbDoSave = TRUE;
 	}
 
 	// Total Disks
-	if ( lkCmdLineParser.GetVal(_T("total_disks"), lsValue) )
+	if ( pkCmdLineParser.GetVal(_T("total_disks"), lsValue) )
 	{
 		lpkDoc->m_pkTotalDisks->SetValue(COleVariant((long)_wtoi(lsValue.GetString()), VT_UI4));
 		lbDoSave = TRUE;
 	}
 
 	// Encoding Tool
-	if ( lkCmdLineParser.GetVal(_T("encoding_tool"), lsValue) )
+	if ( pkCmdLineParser.GetVal(_T("encoding_tool"), lsValue) )
 	{
 		lpkDoc->m_pkEncodingTool->SetValue(COleVariant(lsValue));
 		lbDoSave = TRUE;
 	}
 
 	// Genre
-	if ( lkCmdLineParser.GetVal(_T("genre"), lsValue) )
+	if ( pkCmdLineParser.GetVal(_T("genre"), lsValue) )
 	{
 		lpkDoc->m_pkGenre->SetValue(COleVariant(lsValue));
 		lbDoSave = TRUE;
 	}
 	
 	// Grouping
-	if ( lkCmdLineParser.GetVal(_T("grouping"), lsValue) )
+	if ( pkCmdLineParser.GetVal(_T("grouping"), lsValue) )
 	{
 		lpkDoc->m_pkGrouping->SetValue(COleVariant(lsValue));
 		lbDoSave = TRUE;
 	}
 	
 	// Name
-	if ( lkCmdLineParser.GetVal(_T("name"), lsValue) )
+	if ( pkCmdLineParser.GetVal(_T("name"), lsValue) )
 	{
 		lpkDoc->m_pkName->SetValue(COleVariant(lsValue));
 		lbDoSave = TRUE;
 	}
 	
 	// Part Of Gapless Album
-	if ( lkCmdLineParser.GetVal(_T("part_of_gapless_album"), lsValue) )
+	if ( pkCmdLineParser.GetVal(_T("part_of_gapless_album"), lsValue) )
 	{
 		lpkDoc->m_pkPartOfGaplessAlbum->SetValue(COleVariant((short)_wtoi(lsValue.GetString()), VT_BOOL));
 		lbDoSave = TRUE;
 	}
 	
 	// Tempo
-	if ( lkCmdLineParser.GetVal(_T("tempo"), lsValue) )
+	if ( pkCmdLineParser.GetVal(_T("tempo"), lsValue) )
 	{
 		lpkDoc->m_pkTempo->SetValue(COleVariant((long)_wtoi(lsValue.GetString()), VT_UI4));
 		lbDoSave = TRUE;
 	}
 	
 	// Track
-	if ( lkCmdLineParser.GetVal(_T("track"), lsValue) )
+	if ( pkCmdLineParser.GetVal(_T("track"), lsValue) )
 	{
 		lpkDoc->m_pkTrack->SetValue(COleVariant((long)_wtoi(lsValue.GetString()), VT_UI4));
 		lbDoSave = TRUE;
 	}
 	
 	// Total Tracks
-	if ( lkCmdLineParser.GetVal(_T("total_tracks"), lsValue) )
+	if ( pkCmdLineParser.GetVal(_T("total_tracks"), lsValue) )
 	{
 		lpkDoc->m_pkTotalTracks->SetValue(COleVariant((long)_wtoi(lsValue.GetString()), VT_UI4));
 		lbDoSave = TRUE;
 	}
 
 	//////////////////////////////////////////////////////////////////////////////
-	// chapters
+	// chapter import & manipulation
 	//////////////////////////////////////////////////////////////////////////////	
 	
 	// import
-	if ( lkCmdLineParser.GetVal(_T("import"), lsValue) )
+	if ( pkCmdLineParser.GetVal(_T("import"), lsValue) )
 	{
 		lpkDoc->ImportChapters(lsValue, 0);
 		lbDoSave = TRUE;
 	}
 	
 	// import2
-	if ( lkCmdLineParser.GetVal(_T("import2"), lsValue) )
+	if ( pkCmdLineParser.GetVal(_T("import2"), lsValue) )
 	{
 		lpkDoc->ImportChapters(lsValue, 1);
 		lbDoSave = TRUE;
 	}
 
 	// clear_chapters
-	if ( lkCmdLineParser.GetVal(_T("clear_chapters"), lsValue) )
+	if ( pkCmdLineParser.GetVal(_T("clear_chapters"), lsValue) )
 	{
 		lbDoSave = lpkDoc->ClearChapters();
 	}
 
 	// autocreate_chapters
-	if ( lkCmdLineParser.GetVal(_T("autocreate_chapters"), lsValue) )
+	if ( pkCmdLineParser.GetVal(_T("autocreate_chapters"), lsValue) )
 	{
 		lbDoSave = lpkDoc->AutoCreateChapters(_wtoi(lsValue.GetString()));
 	}
+
+	//////////////////////////////////////////////////////////////////////////////
+	// SAVE
+	//////////////////////////////////////////////////////////////////////////////	
 
 	// save?
 	if ( lbDoSave )
@@ -442,17 +450,107 @@ BOOL CApplication::ParseCommandLine()
 		lpkDoc->DoFileSave();
 		lbDoSave = FALSE;
 	}
+
+	//////////////////////////////////////////////////////////////////////////////
+	// chapter export
+	//////////////////////////////////////////////////////////////////////////////	
 	
 	// export
-	if ( lkCmdLineParser.GetVal(_T("export"), lsValue) )
+	if ( pkCmdLineParser.GetVal(_T("export"), lsValue) )
 	{
 		lpkDoc->ExportChapters(lsValue, 0);
 	}
 
 	// export2
-	if ( lkCmdLineParser.GetVal(_T("export2"), lsValue) )
+	if ( pkCmdLineParser.GetVal(_T("export2"), lsValue) )
 	{
 		lpkDoc->ExportChapters(lsValue, 1);
+	}
+
+	//////////////////////////////////////////////////////////////////////////////
+	// various
+	//////////////////////////////////////////////////////////////////////////////
+
+	// optimize
+	if ( pkCmdLineParser.GetVal(_T("optimize"), lsValue) )
+	{
+		if ( !MP4Optimize(CW2A(lpkDoc->GetPathName()), CW2A(lsValue)) )
+			AfxMessageBox(IDS_ERROR_OPTIMIZE, MB_ICONERROR);		
+	}
+
+	return FALSE;
+}
+
+//////////////////////////////////////////////////////////////////////////////
+// 
+//////////////////////////////////////////////////////////////////////////////
+BOOL CApplication::ParseCommandLineForFolderAction(CCmdLineParser &pkCmdLineParser)
+{
+	CCmdLineParser_String lsValue;
+	CMovieDoc *lpkDoc = NULL;
+	BOOL lbDoSave = FALSE;
+
+	// find "folder"
+	if ( !pkCmdLineParser.GetVal(_T("folder"), lsValue) )
+		return FALSE;
+
+	// don't accept empty strings
+	if ( lsValue.IsEmpty() )
+		return FALSE;
+
+	// add missing backslash
+	if ( _T('\\') != lsValue.GetAt(lsValue.GetLength() - 1) )
+		lsValue += _T('\\');
+
+	// add file pattern
+	lsValue+= _T("*.*");
+
+	// iterate files in folder
+	CFileFind lkFileFind;
+	BOOL lbWorking = lkFileFind.FindFile(lsValue);
+	while ( lbWorking )
+	{
+		// get next file
+		lbWorking = lkFileFind.FindNextFile();
+		
+		// ignore directories
+		if ( lkFileFind.IsDirectory() )
+			continue;
+
+		// extract filename and file extension
+		CString lsFileName = lkFileFind.GetFilePath();
+		CString lsFileExt = lsFileName.Right(3);
+
+		// m4v and mp4 files are valid
+		if ( 0 == lsFileExt.CompareNoCase(_T("m4v")) ||
+			 0 == lsFileExt.CompareNoCase(_T("mp4")) )
+		{
+			// open file
+			lpkDoc = dynamic_cast<CMovieDoc*>(OpenDocumentFile(lsFileName));
+			if ( !VALID_PTR(lpkDoc) )
+				continue;
+
+			//////////////////////////////////////////////////////////////////////////////
+			// chapter manipulation
+			//////////////////////////////////////////////////////////////////////////////	
+
+			// clear_chapters
+			if ( pkCmdLineParser.GetVal(_T("clear_chapters"), lsValue) )
+			{
+				lbDoSave = lpkDoc->ClearChapters();
+			}
+
+			//////////////////////////////////////////////////////////////////////////////
+			// SAVE
+			//////////////////////////////////////////////////////////////////////////////	
+
+			// save?
+			if ( lbDoSave )
+			{
+				lpkDoc->DoFileSave();
+				lbDoSave = FALSE;
+			}
+		}
 	}
 
 	return FALSE;
