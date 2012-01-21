@@ -15,19 +15,19 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_1C5005436654491EBA2C999AFC606CBB"
+        "MsmKey" = "8:_338856219EFE44C0A9E091AC541E7510"
         "OwnerKey" = "8:_ACAB6B2180924839964F16008927CCCC"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_25A022822B89903D420216793FAA4C35"
+        "MsmKey" = "8:_39A84AFAEA214BDFA59C68BD3CBC7866"
         "OwnerKey" = "8:_ACAB6B2180924839964F16008927CCCC"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_890B175EE6464A04A192AFEF75496203"
+        "MsmKey" = "8:_60E3B2BF8D059C2BB5FBA0FBD8D70854"
         "OwnerKey" = "8:_ACAB6B2180924839964F16008927CCCC"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -134,7 +134,7 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_25A022822B89903D420216793FAA4C35"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_60E3B2BF8D059C2BB5FBA0FBD8D70854"
             {
             "SourcePath" = "8:libmp4v2.dll"
             "TargetName" = "8:libmp4v2.dll"
@@ -210,15 +210,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Drax"
-        "ProductCode" = "8:{00CD9C51-46C7-4201-BBFF-BDA35D33E38D}"
-        "PackageCode" = "8:{5612B1DB-A216-49C7-B7BC-859F918051B3}"
+        "ProductCode" = "8:{86BCB839-18FE-4A1E-B24B-7884ACFBF701}"
+        "PackageCode" = "8:{9F18A8B9-2A00-4547-A92E-6E0CE8A0257B}"
         "UpgradeCode" = "8:{D6F45D05-0747-4818-9E81-51A3ABFD90F0}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.6.4"
+        "ProductVersion" = "8:1.6.5"
         "Manufacturer" = "8:Drax"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -755,7 +755,7 @@
         }
         "MergeModule"
         {
-            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_1C5005436654491EBA2C999AFC606CBB"
+            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_338856219EFE44C0A9E091AC541E7510"
             {
             "UseDynamicProperties" = "11:TRUE"
             "IsDependency" = "11:TRUE"
@@ -769,7 +769,7 @@
             "Feature" = "8:"
             "IsolateTo" = "8:"
             }
-            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_890B175EE6464A04A192AFEF75496203"
+            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_39A84AFAEA214BDFA59C68BD3CBC7866"
             {
             "UseDynamicProperties" = "11:TRUE"
             "IsDependency" = "11:TRUE"
