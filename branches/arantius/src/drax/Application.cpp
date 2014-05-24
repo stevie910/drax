@@ -262,7 +262,7 @@ BOOL CApplication::ParseCommandLine()
 	CCmdLineParser lkCmdLineParser(GetCommandLine());
 
 	// do command line arguments exist?
-	if ( lkCmdLineParser.getVals().empty() )
+	if ( lkCmdLineParser.getVals().size() <= 1 )
 		return TRUE; // show regular main window
 
 	// find "file"
