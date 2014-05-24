@@ -39,6 +39,7 @@ BEGIN_MESSAGE_MAP(CApplication, CWinAppEx)
 	ON_COMMAND(ID_FILE_OPEN, OnFileOpen)
 	ON_UPDATE_COMMAND_UI(ID_FILE_SAVE, OnUpdateFileSave)
 	ON_COMMAND(ID_FILE_OPTIMIZE, OnFileOptimize)
+	ON_COMMAND(ID_FILE_OPTIMIZEINPLACE, OnFileOptimizeInPlace)
 	ON_UPDATE_COMMAND_UI(ID_FILE_OPTIMIZE, OnUpdateFileOptimize)
 	ON_COMMAND(ID_FILE_IMPORT_CHAPTERS, OnFileImportChapters)
 	ON_COMMAND(ID_FILE_EXPORT_CHAPTERS, OnFileExportChapters)
@@ -155,6 +156,25 @@ void CApplication::OnFileOptimize()
 
 	// optimize file
 	if ( !MP4Optimize(CW2A(lpkDoc->GetPathName()), CW2A(ldlgFile.GetPathName())) )
+		AfxMessageBox(IDS_ERROR_OPTIMIZE, MB_ICONERROR);
+	else
+		AfxMessageBox(IDS_INFO_OPTIMIZE, MB_ICONINFORMATION);
+}
+
+void CApplication::OnFileOptimizeInPlace()
+{
+	// get document
+	CDocument *lpkDoc = GetActiveDocument();
+	ASSERT_VALID_PTR(lpkDoc);
+
+	// warning
+	AfxMessageBox(IDS_WARNING_OPTIMIZE, MB_ICONEXCLAMATION);
+
+	// enable wait cursor
+	CWaitCursor lcurWait;
+
+	// optimize file
+	if (!MP4Optimize(CW2A(lpkDoc->GetPathName())))
 		AfxMessageBox(IDS_ERROR_OPTIMIZE, MB_ICONERROR);
 	else
 		AfxMessageBox(IDS_INFO_OPTIMIZE, MB_ICONINFORMATION);
