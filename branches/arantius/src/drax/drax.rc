@@ -320,7 +320,7 @@ END
 STRINGTABLE
 BEGIN
     IDR_MAINFRAME           "Drax"
-    IDR_MOVIE               "\nFilm\n\nM4V-Filme (*.m4v)\n.m4v\n\n"
+    IDR_MOVIE               "\nFilm\n\nM4V-Filme (*.mp4; *.m4v)\n.mp4;.m4v\n\n"
     IDS_INFORMATION         "Informationen"
     IDS_CHAPTERS            "Kapitel"
     IDS_ID                  "ID"
@@ -567,7 +567,7 @@ END
 STRINGTABLE
 BEGIN
     IDR_MAINFRAME           "Drax"
-    IDR_MOVIE               "\nMovie\n\nM4V Movies (*.m4v)\n.m4v\n\n"
+    IDR_MOVIE               "\nMovie\n\nM4V Movies (*.mp4; *.m4v)\n.mp4;.m4v\n\n"
     IDS_INFORMATION         "Information"
     IDS_CHAPTERS            "Chapters"
     IDS_ID                  "ID"
