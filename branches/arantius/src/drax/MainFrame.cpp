@@ -7,6 +7,7 @@
 
 #include "StdAfx.h"
 #include "MainFrame.h"
+#include "DropTarget.h"
 
 // status bar indicators
 static UINT miIndicators[] =
@@ -115,6 +116,13 @@ int CMainFrame::OnCreate(LPCREATESTRUCT pptCreate)
 	EnableDocking(CBRS_ALIGN_ANY);
 	DockPane(&m_wndMenuBar);
 	DockPane(&m_wndToolBar);
+
+	// Enable drag/drop.
+	CDropTarget *pDropTarget = new CDropTarget(this->m_hWnd);
+	// acquire a strong lock
+	CoLockObjectExternal(pDropTarget, TRUE, FALSE);
+	// tell OLE that the window is a drop target
+	RegisterDragDrop(this->m_hWnd, pDropTarget);
 
 	return 0;
 }
