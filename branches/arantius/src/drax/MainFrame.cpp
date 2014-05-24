@@ -34,6 +34,8 @@ CMainFrame::~CMainFrame()
 
 BEGIN_MESSAGE_MAP(CMainFrame, CMDIFrameWndEx)
 	ON_WM_CREATE()
+	ON_WM_SHOWWINDOW()
+	ON_WM_CLOSE()
 	ON_COMMAND(ID_EDIT_CUT, OnEditCut)
 	ON_UPDATE_COMMAND_UI(ID_EDIT_CUT, OnUpdateToClip)
 	ON_COMMAND(ID_EDIT_COPY, OnEditCopy)
@@ -156,4 +158,49 @@ void CMainFrame::OnEditPaste()
 	ASSERT(IsEdit(lpwndEdit));
 	ASSERT(::IsClipboardFormatAvailable(CF_TEXT));
 	lpwndEdit->Paste();
+}
+
+//////////////////////////////////////////////////////////////////////////////
+// 
+//////////////////////////////////////////////////////////////////////////////
+void CMainFrame::OnClose()
+{
+	WINDOWPLACEMENT wp = { 0 };
+	wp.length = sizeof(wp);
+	if (GetWindowPlacement(&wp))
+	{
+		//if (!IsZoomed())
+		//{
+		//	// Work around; Aero Snap is invisible to GetWindowPlacement.
+		//	GetWindowRect(&wp.rcNormalPosition);
+		//}
+		AfxGetApp()->WriteProfileBinary(L"MainFrame", L"WP", (LPBYTE)&wp, sizeof(wp));
+	}
+
+	CMDIFrameWndEx::OnClose();
+}
+
+//////////////////////////////////////////////////////////////////////////////
+//
+//////////////////////////////////////////////////////////////////////////////
+void CMainFrame::OnShowWindow(BOOL bShow, UINT nStatus)
+{
+	CMDIFrameWnd::OnShowWindow(bShow, nStatus);
+
+	static bool bOnce = true;
+
+	if (bShow && !IsWindowVisible()
+		&& bOnce)
+	{
+		bOnce = false;
+
+		WINDOWPLACEMENT *lwp;
+		UINT nl;
+
+		if (AfxGetApp()->GetProfileBinary(L"MainFrame", L"WP", (LPBYTE*)&lwp, &nl))
+		{
+			SetWindowPlacement(lwp);
+			delete[] lwp;
+		}
+	}
 }

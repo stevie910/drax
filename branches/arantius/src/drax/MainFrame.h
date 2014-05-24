@@ -32,6 +32,8 @@ protected:
 	//////////////////////////////////////////////////////////////////////////////
 
 	afx_msg int OnCreate(LPCREATESTRUCT pptCreateStruct);
+	afx_msg void OnClose();
+	afx_msg void OnShowWindow(BOOL bShow, UINT nStatus);
 
 	afx_msg void OnEditCut();
 	afx_msg void OnEditCopy();
