@@ -33,6 +33,7 @@ protected:
 protected:
 	afx_msg void OnUpdateFileSave(CCmdUI *ppkCmdUI);
 	afx_msg void OnFileOptimize();
+	afx_msg void OnFileOptimizeInPlace();
 	afx_msg void OnUpdateFileOptimize(CCmdUI *ppkCmdUI);
 	afx_msg void OnFileImportChapters();
 	afx_msg void OnFileExportChapters();
