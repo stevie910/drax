@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "drax", "drax\drax.vcxproj", "{EB9160EE-93DC-4845-A204-F59839A747F7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BDB97A37-90B8-4906-BCAB-663D983E33E3} = {BDB97A37-90B8-4906-BCAB-663D983E33E3}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libmp4v2", "..\lib\mp4v2\vstudio9.0\libmp4v2\libmp4v2.vcxproj", "{BDB97A37-90B8-4906-BCAB-663D983E33E3}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "setup", "setup\setup.vdproj", "{D9961422-4D3A-4AA9-8FDF-FCD7FA22D9E1}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug Static|Win32 = Debug Static|Win32
+		Debug|Win32 = Debug|Win32
+		Release Static|Win32 = Release Static|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB9160EE-93DC-4845-A204-F59839A747F7}.Debug Static|Win32.ActiveCfg = Debug|Win32
+		{EB9160EE-93DC-4845-A204-F59839A747F7}.Debug Static|Win32.Build.0 = Debug|Win32
+		{EB9160EE-93DC-4845-A204-F59839A747F7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EB9160EE-93DC-4845-A204-F59839A747F7}.Debug|Win32.Build.0 = Debug|Win32
+		{EB9160EE-93DC-4845-A204-F59839A747F7}.Release Static|Win32.ActiveCfg = Release|Win32
+		{EB9160EE-93DC-4845-A204-F59839A747F7}.Release Static|Win32.Build.0 = Release|Win32
+		{EB9160EE-93DC-4845-A204-F59839A747F7}.Release|Win32.ActiveCfg = Release|Win32
+		{EB9160EE-93DC-4845-A204-F59839A747F7}.Release|Win32.Build.0 = Release|Win32
+		{BDB97A37-90B8-4906-BCAB-663D983E33E3}.Debug Static|Win32.ActiveCfg = Debug Static|Win32
+		{BDB97A37-90B8-4906-BCAB-663D983E33E3}.Debug Static|Win32.Build.0 = Debug Static|Win32
+		{BDB97A37-90B8-4906-BCAB-663D983E33E3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BDB97A37-90B8-4906-BCAB-663D983E33E3}.Debug|Win32.Build.0 = Debug|Win32
+		{BDB97A37-90B8-4906-BCAB-663D983E33E3}.Release Static|Win32.ActiveCfg = Release Static|Win32
+		{BDB97A37-90B8-4906-BCAB-663D983E33E3}.Release Static|Win32.Build.0 = Release Static|Win32
+		{BDB97A37-90B8-4906-BCAB-663D983E33E3}.Release|Win32.ActiveCfg = Release|Win32
+		{BDB97A37-90B8-4906-BCAB-663D983E33E3}.Release|Win32.Build.0 = Release|Win32
+		{D9961422-4D3A-4AA9-8FDF-FCD7FA22D9E1}.Debug Static|Win32.ActiveCfg = Debug
+		{D9961422-4D3A-4AA9-8FDF-FCD7FA22D9E1}.Debug|Win32.ActiveCfg = Debug
+		{D9961422-4D3A-4AA9-8FDF-FCD7FA22D9E1}.Release Static|Win32.ActiveCfg = Release
+		{D9961422-4D3A-4AA9-8FDF-FCD7FA22D9E1}.Release|Win32.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
