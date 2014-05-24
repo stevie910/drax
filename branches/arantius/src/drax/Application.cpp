@@ -52,6 +52,9 @@ END_MESSAGE_MAP()
 //////////////////////////////////////////////////////////////////////////////
 BOOL CApplication::InitInstance()
 {
+	// This program requires COM for drag/drop.
+	OleInitialize(0);
+
 	CWinApp::InitInstance();
 
 	// set registry key
