@@ -1,0 +1,1082 @@
+<div class="wikidoc">
+<h2>Comments</h2>
+<p>This list was exported from the former website of Drax. For new comments, please use the
+<a title="Discussions" href="/discussions" target="_self">Discussions</a>.</p>
+<hr size="1">
+<ul id="x_x_x_x_x_commentlist">
+<li id="x_x_x_x_x_comment-14826">
+<div>
+<div><span><strong>Bill Tanner</strong></span>
+<div>December 4, 2010 at 9:05 pm</div>
+</div>
+<div>
+<p>Drax rocks!</p>
+<p>I&rsquo;ve got an automated process that takes a recorded TV show, transcodes it to h.264, updates the metadata (using theTVDB.com), and adds a chapter mark every 30 seconds using Drax with a worst-case length chapter file. The &ldquo;chapter file too long&rdquo;
+ error message is a bit disruptive to my process so I&rsquo;m looking forward to a version that doesn&rsquo;t have it.</p>
+<p>It would even be even more useful for me if Drax just had a command line option to add a chapter mark every &ldquo;n&rdquo; seconds. Also, an option to delete all existing chapter marks would come in handy.</p>
+<p>If you are curious, I use VideoRedo-AutoProcessor (free) to automate the overall process and update the metadata. I use VideoReDo TVSuite V4 (not free) to do the transcoding.</p>
+</div>
+</div>
+<ul>
+<li id="x_x_x_x_x_comment-14833">
+<div>
+<div><span><strong>Stephan</strong></span>
+<div>December 5, 2010 at 12:04 am</div>
+</div>
+<div>
+<p>Hi Bill,</p>
+<p>I&rsquo;ve got some good news:</p>
+<blockquote>
+<p>It would even be even more useful for me if Drax just had a command line option to add a chapter mark every &ldquo;n&rdquo; seconds.</p>
+</blockquote>
+<p>Now, you can use the option <strong>autocreate_chapters</strong>. For creating a chapter every 5 seconds just type the following command:</p>
+<div>
+<div>
+<pre style="font-family:monospace">drax.exe /file:&quot;sample_iPod.m4v&quot; /autocreate_chapters:5</pre>
+</div>
+</div>
+<blockquote>
+<p>Also, an option to delete all existing chapter marks would come in handy.</p>
+</blockquote>
+<p>Furthermore, you can use the <strong>clear_chapters</strong> option. For removing all chapters just type the following command:</p>
+<div>
+<div>
+<pre style="font-family:monospace">drax.exe /file:&quot;sample_iPod.m4v&quot; /clear_chapters</pre>
+</div>
+</div>
+<p>BTW: <strong>autocreate_chapters</strong> implies <strong>clear_chapters</strong>.</p>
+<p>Both functions are implemented in version 1.6.2. Have fun! :-)</p>
+<p>&ndash; Stephan</p>
+</div>
+</div>
+<ul>
+<li id="x_x_x_x_x_comment-14845">
+<div>
+<div><span><strong>Bill Tanner</strong></span>
+<div>December 5, 2010 at 3:44 am</div>
+</div>
+<div>
+<p>Wow, that was quick. Thanks.</p>
+</div>
+</div>
+</li></ul>
+</li><li id="x_x_x_x_x_comment-16352">
+<div>
+<div><span><strong>Matt</strong></span>
+<div>December 26, 2010 at 12:43 pm</div>
+</div>
+<div>
+<p>I use the optimize function to fix a lot of my movies and tv shows. The gui works great for doing a few at a time, but is there any way to batch optimize a set of m4v files?</p>
+</div>
+</div>
+<ul>
+<li id="x_x_x_x_x_comment-16361">
+<div>
+<div><span><strong>Stephan</strong></span>
+<div>December 26, 2010 at 2:23 pm</div>
+</div>
+<div>
+<p>Hi Matt,</p>
+<p>I just added the &ldquo;Optimize&rdquo; feature to the command line mode:</p>
+<div>
+<div>
+<pre style="font-family:monospace">drax.exe /file:&quot;C:\Temp\sample_iPod.m4v&quot; /optimize:&quot;C:\Temp\sample_iPod_optimized.m4v&quot;</pre>
+</div>
+</div>
+<p>It&rsquo;s available in version 1.6.3.</p>
+<p>Enjoy! :-)</p>
+<p>&ndash; Stephan</p>
+</div>
+</div>
+</li></ul>
+</li><li id="x_x_x_x_x_comment-26548">
+<div>
+<div><span><strong>phibertron</strong></span>
+<div>April 3, 2011 at 5:59 pm</div>
+</div>
+<div>
+<p>Is there a way to list all of the kwown commands<br>
+for ex: drax.exe /?<br>
+I have gleaned most of them from this thread<br>
+but&hellip;</p>
+</div>
+</div>
+<ul>
+<li id="x_x_x_x_x_comment-26777">
+<div>
+<div><span><strong>Stephan</strong></span>
+<div>April 5, 2011 at 11:22 pm</div>
+</div>
+<div>
+<p>Unfortunately, there&rsquo;s no /? switch.</p>
+<p>I&rsquo;ll consider it in the next release.</p>
+<p>Thanks, it&rsquo;s a good idea!</p>
+<p>&ndash; Stephan</p>
+</div>
+</div>
+</li></ul>
+</li></ul>
+</li><li id="x_x_x_x_x_comment-14006">
+<div>
+<div><span><strong>Dan Hinsley</strong></span>
+<div>November 21, 2010 at 7:09 pm</div>
+</div>
+<div>
+<p>I wrote an app called MetaX that is used to tag mp4/m4v files. It uses the open source MP4V2 library to read/write the tags. Right now it&rsquo;s got a problem with chapters for some users. Somehow they get the chapter data written so that the Apple TV V2
+ doesn&rsquo;t play the file. I can&rsquo;t even read the chapters they have, but iTunes and Drax do. Could you tell me what you use to read/write the tags?</p>
+<p>Thanks,<br>
+Dan</p>
+</div>
+</div>
+</li><li id="x_x_x_x_x_comment-10145">
+<div>
+<div><span><strong>Chris</strong></span>
+<div>September 4, 2010 at 7:53 pm</div>
+</div>
+<div>
+<p>Hi can you edit it so you can use mp4 files as well</p>
+</div>
+</div>
+<ul>
+<li id="x_x_x_x_x_comment-10215">
+<div>
+<div><span><strong>Stephan</strong></span>
+<div>September 6, 2010 at 6:14 am</div>
+</div>
+<div>
+<p>You can use MP4 files. Or did you mean the file choosing window?</p>
+</div>
+</div>
+</li></ul>
+</li><li id="x_x_x_x_x_comment-7915">
+<div>
+<div><span><strong>Scott</strong></span>
+<div>June 14, 2010 at 8:10 am</div>
+</div>
+<div>
+<p>Any idea why my iPad&rsquo;s built-in Movies application doesn&rsquo;t show the chapter titles I edited using Drax? iTunes on my PC shows the chapter titles correctly. The iPad just shows &ldquo;Chapter 1&Prime;, &ldquo;Chapter 2&Prime;, etc.</p>
+</div>
+</div>
+<ul>
+<li id="x_x_x_x_x_comment-7923">
+<div>
+<div><span><strong>Stephan</strong></span>
+<div>June 14, 2010 at 2:04 pm</div>
+</div>
+<div>
+<p>Hi Scott,</p>
+<p>Hmm, sounds strange. Have you really re-synced your iPad after editing the movie? I will pursue that issue when my iPad has been delivered.</p>
+<p>&ndash; Stephan</p>
+</div>
+</div>
+<ul>
+<li id="x_x_x_x_x_comment-7936">
+<div>
+<div><span><strong>Scott</strong></span>
+<div>June 15, 2010 at 6:55 am</div>
+</div>
+<div>
+<p>Ya, I resynced the content and added a new (chaptered) movie. Neither the resynced movie nor the new one show the chapter titles.</p>
+</div>
+</div>
+</li></ul>
+</li></ul>
+</li><li id="x_x_x_x_x_comment-7472">
+<div>
+<div><span><strong>Glen B</strong></span>
+<div>May 23, 2010 at 4:22 am</div>
+</div>
+<div>
+<p>I am using Itunes to load my iPod Touch 64.</p>
+<p>can you add &ldquo;Itunes media type&rdquo; to your drax program? I have updated the other fields using drax in CLI, and it works great.</p>
+<p>Now if I can make the updated m4v files show up in tvshows and not movies that would be awesome</p>
+<p>Awesome little utility<br>
+Glen</p>
+</div>
+</div>
+<ul>
+<li id="x_x_x_x_x_comment-7518">
+<div>
+<div><span><strong>Stephan</strong></span>
+<div>May 25, 2010 at 11:42 am</div>
+</div>
+<div>
+<blockquote>
+<p>can you add &ldquo;Itunes media type&rdquo; to your drax program?</p>
+</blockquote>
+<p>Yep, will come soon in the next release.</p>
+<p>&ndash; Stephan</p>
+</div>
+</div>
+</li></ul>
+</li><li id="x_x_x_x_x_comment-7354">
+<div>
+<div><span><strong>Ken</strong></span>
+<div>May 17, 2010 at 3:09 pm</div>
+</div>
+<div>
+<p>Absolutely outstanding tool. Have searched for something like this for I dont know how long and like many others, simply stumbled across it today.</p>
+<p>So I am using the command line, and have created a chapter text file to insert a chapter every 30 seconds. One of the frustrating things about ipods/iphones is the difficulty in &lsquo;dragging&rsquo; the bar to the part of the video you want. Its way to
+ sensitve.</p>
+<p>This way I can jump back and forth using chapters when needed. Ideal when skipping 30-90 seconds of credits when watching a tv show on the device.</p>
+<p>The template chapter file I created is 90 mins long, every 30 seconds. And drax handles the excess chapters well (in that it truncates to only those needed. Something other tools dont, they just fail).</p>
+<p>A minor enhanacement suggestion that would make the tool even better (if I may) would be to add a command line option to ignore the error that drax throws in this scenario (about the chapters exceeding the movie lenth). Being able to override this error
+ would remove the last manual step.</p>
+<p>Great work!</p>
+</div>
+</div>
+<ul>
+<li id="x_x_x_x_x_comment-7397">
+<div>
+<div><span><strong>Stephan</strong></span>
+<div>May 19, 2010 at 12:04 pm</div>
+</div>
+<div>
+<p>Hi Ken,</p>
+<p>Many thanks! I&rsquo;m currently working on a new version of Drax which separates the command line and the GUI features. In that case the error message you mentioned won&rsquo;t appear anymore.</p>
+<p>&ndash; Stephan</p>
+</div>
+</div>
+</li></ul>
+</li><li id="x_x_x_x_x_comment-6359">
+<div>
+<div><span><strong>eon</strong></span>
+<div>March 30, 2010 at 5:03 pm</div>
+</div>
+<div>
+<p>Fantastic &ndash; at last a way to add chapters to m4v or mp4 video files.</p>
+<p>Are there any plans to incorporate more tags? for example ones specifically for video? (Kind of file, Copyright, Release date, Sorting, Rating, Episode ID, Season ID etc, etc)</p>
+<p>Also any plans to get the chapters to include a frame image &ndash; similar to movies from iTunes.</p>
+<p>Once again, superb job.</p>
+<p>Thanks.</p>
+</div>
+</div>
+<ul>
+<li id="x_x_x_x_x_comment-6361">
+<div>
+<div><span><strong>Stephan</strong></span>
+<div>March 30, 2010 at 7:35 pm</div>
+</div>
+<div>
+<p>Hi Eon,</p>
+<p>Thanks for the compliment! More tags (e.g. for videos) are planned for the next release. Concerning the frame image in chapters I&rsquo;m not quite sure if it&rsquo;s supported by mp4v2.</p>
+<p>&ndash; Stephan</p>
+</div>
+</div>
+<ul>
+<li id="x_x_x_x_x_comment-7433">
+<div>
+<div><span><strong>Grant</strong></span>
+<div>May 21, 2010 at 11:09 am</div>
+</div>
+<div>
+<p>Hi Stephen,</p>
+<p>Thanks for you fantastic program. I also would love the abiblity to have chapters include a frame image.<br>
+If it helps Suble (<a rel="nofollow" href="http://code.google.com/p/subler/">http://code.google.com/p/subler/</a>) is an open source program that has this feature, it a Mac OS X only program.</p>
+<p>Thanks again<br>
+Grant</p>
+</div>
+</div>
+<ul>
+<li id="x_x_x_x_x_comment-7517">
+<div>
+<div><span><strong>Stephan</strong></span>
+<div>May 25, 2010 at 11:39 am</div>
+</div>
+<div>
+<p>Hi Grant,</p>
+<p>Thanks for the link! I&rsquo;ll check out how subler handles frame images.</p>
+<p>&ndash; Stephan</p>
+</div>
+</div>
+</li><li id="x_x_x_x_x_comment-10675">
+<div>
+<div><span><strong>Rob</strong></span>
+<div>September 15, 2010 at 7:59 am</div>
+</div>
+<div>
+<p>Thanks for the link Grant. It&rsquo;s interesting how Mac users were able to deconstruct an mp4/m4v file and come to a solution concerning frame images (<a rel="nofollow" href="http://code.google.com/p/subler/issues/detail?id=27">http://code.google.com/p/subler/issues/detail?id=27</a>).</p>
+<p>If only there was a solution for Windows :-)</p>
+</div>
+</div>
+<ul>
+<li id="x_x_x_x_x_comment-19240">
+<div>
+<div><span><strong>mrstudz</strong></span>
+<div>January 24, 2011 at 9:47 am</div>
+</div>
+<div>
+<p>Any luck finding a solution for the chapter images? Ive hunted everywhere subler is the only thing i found that would work.</p>
+</div>
+</div>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li><li id="x_x_x_x_x_comment-5953">
+<div>
+<div><span><strong>Stephan</strong></span>
+<div>March 11, 2010 at 6:31 pm</div>
+</div>
+<div>
+<p><span style="text-decoration:underline">Release Notes of Version 1.6</span>: Now Drax includes the latest
+<strong>libmp4v2</strong> (trunk-r355). Furthermore two <strong>command line parameters</strong> have been changed:</p>
+<div>
+<div>
+<pre style="font-family:monospace">drax.exe /file:&quot;C:\Temp\Movie.m4v&quot;
+         /composer:&quot;My Composer&quot;           # former &quot;writer&quot;
+         /encoding_tool:&quot;My Encoding Tool&quot; # former &quot;tool&quot;</pre>
+</div>
+</div>
+</div>
+</div>
+<ul>
+<li id="x_x_x_x_x_comment-6980">
+<div>
+<div><span><strong>Chris</strong></span>
+<div>April 28, 2010 at 1:09 am</div>
+</div>
+<div>
+<p>Is there a way to import chapters from the command line?</p>
+<p>Thanks!</p>
+</div>
+</div>
+<ul>
+<li id="x_x_x_x_x_comment-6988">
+<div>
+<div><span><strong>Stephan</strong></span>
+<div>April 28, 2010 at 10:57 am</div>
+</div>
+<div>
+<p>Yep! Here you go. :-)</p>
+</div>
+</div>
+</li></ul>
+</li></ul>
+</li><li id="x_x_x_x_x_comment-5942">
+<div>
+<div><span><strong>Andrew K</strong></span>
+<div>March 9, 2010 at 7:07 am</div>
+</div>
+<div>
+<p>WOW. many thanks. this app saved me a whole heckuva lot of time. I totally screwed up the chapter names on import, and was up against a deadline. Thanks for taking the time to put this together for us windows users. Cheers.</p>
+</div>
+</div>
+</li><li id="x_x_x_x_x_comment-5157">
+<div>
+<div><span><strong>Sean</strong></span>
+<div>February 7, 2010 at 9:07 am</div>
+</div>
+<div>
+<p>I have spent hours upon hours looking for a windows-based cli chapter tool to compliment AtomicParsley in my tagging process. I had given up and stumbled on your page by accident while working on somthing else &hellip; I know it&rsquo;s crazy, but it&rsquo;s
+ true ;-) &hellip; thanks for this piece of gold! Will you offer a &lsquo;bare&rsquo; download any time in the future?</p>
+<p>Sean</p>
+</div>
+</div>
+<ul>
+<li id="x_x_x_x_x_comment-5213">
+<div>
+<div><span><strong>Stephan</strong></span>
+<div>February 10, 2010 at 11:22 pm</div>
+</div>
+<div>
+<blockquote>
+<p>thanks for this piece of gold!</p>
+</blockquote>
+<p>Thank you, Sean!</p>
+<blockquote>
+<p>Will you offer a &lsquo;bare&rsquo; download any time in the future?</p>
+</blockquote>
+<p>Um, do you mean:</p>
+<ol>
+<li>A source code download?<br>
+<em>No. On the other hand, Drax is no mystery, &rsquo;cause it simply uses the functions of mp4v2.</em>
+</li><li>An &ldquo;exe-only&rdquo; download?<br>
+<em>Let&rsquo; see. The point is that the MSI package installs depending libraries needed by Drax.</em>
+</li></ol>
+<p>&ndash; Stephan</p>
+</div>
+</div>
+<ul>
+<li id="x_x_x_x_x_comment-5660">
+<div>
+<div><span><strong>Sean</strong></span>
+<div>February 24, 2010 at 11:08 am</div>
+</div>
+<div>
+<p>Hi Stephan.</p>
+<p>I&rsquo;ve incorporated Drax into my normal routine and I noticed that whenever i use Drax on an iTunes file that uses the &ndash;rDNSatom tags (iTunEXTC and iTunMOVI) Drax is wiping the keys. The data is still there but the tags read as &mdash;- [] instead
+ of &mdash;- [iTunMOVI], so the data doesn&rsquo;t show up in iTunes or the AppleTV. Any ideas?</p>
+<p>Thanks!<br>
+Sean</p>
+</div>
+</div>
+<ul>
+<li id="x_x_x_x_x_comment-5661">
+<div>
+<div><span><strong>Stephan</strong></span>
+<div>February 24, 2010 at 12:02 pm</div>
+</div>
+<div>
+<p>Hi Sean,</p>
+<p>Thanks a lot for describing that issue! Maybe that&rsquo;s because Drax uses a stable but slightly outdated version of the mp4v2 library. I&rsquo;ll try to fix it within the next few days.</p>
+<p>&ndash; Stephan</p>
+</div>
+</div>
+<ul>
+<li id="x_x_x_x_x_comment-5668">
+<div>
+<div><span><strong>Sean</strong></span>
+<div>February 24, 2010 at 5:18 pm</div>
+</div>
+<div>
+<p>Awesome, thanks Stephan!</p>
+</div>
+</div>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li><li id="x_x_x_x_x_comment-3021">
+<div>
+<div><span><strong>Jeffrey K</strong></span>
+<div>November 8, 2009 at 4:16 am</div>
+</div>
+<div>
+<p>Hi,</p>
+<p>Awesome tool here &ndash; It filled my need for the chapters.<br>
+You got any plans for future releases?</p>
+<p>Possibly image previews of chapters and I am looking for a way to add extra audio options to a track, but don&rsquo;t if you can help with that.</p>
+<p>Cheers :-)</p>
+</div>
+</div>
+<ul>
+<li id="x_x_x_x_x_comment-5215">
+<div>
+<div><span><strong>Stephan</strong></span>
+<div>February 10, 2010 at 11:35 pm</div>
+</div>
+<div>
+<blockquote>
+<p>Awesome tool here &ndash; It filled my need for the chapters.</p>
+</blockquote>
+<p>Thank you, Jeffrey!</p>
+<blockquote>
+<p>You got any plans for future releases?</p>
+</blockquote>
+<p>Actually, I&rsquo;ve got many ideas to improve Drax: Platform Independence (Mac, Linux etc.), Video Previews, Audio Track Editing etc. Unfortunately I can&rsquo;t promise a roadmap for future releases yet. :-?</p>
+<p>&ndash; Stephan</p>
+</div>
+</div>
+</li></ul>
+</li><li id="x_x_x_x_x_comment-2894">
+<div>
+<div><span><strong>Greg</strong></span>
+<div>October 23, 2009 at 9:46 pm</div>
+</div>
+<div>
+<p>Just wanted to thank you for this program. Works exceptionally well with Ripbot.264 for adding in the chapters into mp4&rsquo;s.</p>
+</div>
+</div>
+</li><li id="x_x_x_x_x_comment-2327">
+<div>
+<div><span><strong>G Belthur</strong></span>
+<div>September 21, 2009 at 5:24 am</div>
+</div>
+<div>
+<p>Hello,</p>
+<p>I downloaded the latest version and even though the download size is 10mb, what get&rsquo;s installed is just one file drax.exe ?</p>
+<p>And if I try to open a m4v file, it&rsquo;s says it cannot edit m4v files..am I missing something here ?</p>
+<p>The exact error is &ldquo;cannot read or modify m4v file&rdquo;.</p>
+</div>
+</div>
+<ul>
+<li id="x_x_x_x_x_comment-2329">
+<div>
+<div><span><strong>Stephan</strong></span>
+<div>September 21, 2009 at 7:15 am</div>
+</div>
+<div>
+<blockquote>
+<p>what get&rsquo;s installed is just one file drax.exe ?</p>
+</blockquote>
+<p>No, the MSI package installs the Drax executable AND all depending libraries (or rather the
+<a rel="nofollow" href="http://www.microsoft.com/downloads/details.aspx?FamilyID=a5c84275-3b97-4ab7-a40d-3802b2af5fc2&DisplayLang=en">
+C&#43;&#43; Redistributable Package</a>).</p>
+<blockquote>
+<p>it&rsquo;s says it cannot edit m4v files..am I missing something here ?</p>
+</blockquote>
+<p>Um, where does the M4V file come from? Is it an output of Handbrake?<br>
+Btw: If the file is DRMed there&rsquo;s is no way to open it with Drax.</p>
+</div>
+</div>
+</li></ul>
+</li><li id="x_x_x_x_x_comment-1005">
+<div>
+<div><span><strong>David</strong></span>
+<div>May 20, 2009 at 4:37 pm</div>
+</div>
+<div>
+<p>I love the chapter import command line support. Can tags be added using command line too?</p>
+</div>
+</div>
+<ul>
+<li id="x_x_x_x_x_comment-1009">
+<div>
+<div><span><strong>Stephan</strong></span>
+<div>May 22, 2009 at 2:38 pm</div>
+</div>
+<div>
+<p>Now Drax provides advanced command line support:</p>
+<p><em>Edit tags:</em></p>
+<div>
+<div>
+<pre style="font-family:monospace">drax.exe /file:&quot;C:\Temp\Movie.m4v&quot;
+         /album:&quot;My Album&quot;
+         /album_artist:&quot;My Album Artist&quot;
+         /artist:&quot;My Artist&quot;
+         /comment:&quot;My Comment&quot;
+         /compilation:1                  # 1 = is compilation, 0 = no compilation
+         /disk:1                         # disk, e.g. 1
+         /total_disks:2                  # total disks, e.g. 2
+         /genre:&quot;My Genre&quot;
+         /grouping:&quot;My Grouping&quot;
+         /name:&quot;My Name&quot;
+         /part_of_gapless_album:1        # 1 = is gapless, 0 = not gapless
+         /tempo:120                      # tempo e.g. 120
+         /tool:&quot;My Tool&quot;
+         /track:1                        # track, e.g. 1
+         /total_tracks:2                 # total tracks, e.g. 2
+         /writer:&quot;My Writer&quot;</pre>
+</div>
+</div>
+<p>Hope this helps!</p>
+</div>
+</div>
+</li><li id="x_x_x_x_x_comment-1015">
+<div>
+<div><span><strong>David</strong></span>
+<div>June 3, 2009 at 6:06 pm</div>
+</div>
+<div>
+<p>Thank you for the command line support!</p>
+</div>
+</div>
+</li></ul>
+</li><li id="x_x_x_x_x_comment-1002">
+<div>
+<div><span><strong>Mark</strong></span>
+<div>May 17, 2009 at 4:29 am</div>
+</div>
+<div>
+<p>Just a thought, would it be possible to add a bit of script to be looser with Vegas marker files? It would involve ignoring the top (title) line and replacing tab characters in the data with a space. Here&rsquo;s an example of what Vegas exports:
+<a rel="nofollow" href="http://shell.dim.com/~musicvid/chapters.zip">http://shell.dim.com/~musicvid/chapters.zip</a></p>
+</div>
+</div>
+<ul>
+<li id="x_x_x_x_x_comment-1004">
+<div>
+<div><span><strong>Stephan</strong></span>
+<div>May 20, 2009 at 12:47 pm</div>
+</div>
+<div>
+<p>Hi Mark,</p>
+<p>I&rsquo;ve got some good news for you: In version 1.5.1 I improved the import feature in the following way: If the 1st line in a chapter file contains &ldquo;Position&rdquo; and &ldquo;Name&rdquo; the entire line will be skipped. That means that Drax interprets
+ the 2nd line as the 1st chapter, 3rd line = 2nd chapter etc. I think from now on it should be possible to import the Vegas export directly.</p>
+<p>All the best!<br>
+Stephan</p>
+</div>
+</div>
+<ul>
+<li id="x_x_x_x_x_comment-1006">
+<div>
+<div><span><strong>Mark</strong></span>
+<div>May 20, 2009 at 5:50 pm</div>
+</div>
+<div>
+<p>It works! Thanks so much, I have posted the news on the the Vegas forums.<br>
+<a rel="nofollow" href="http://www.sonycreativesoftware.com/forums/ShowMessage.asp?MessageID=655182&Replies=0">http://www.sonycreativesoftware.com/forums/ShowMessage.asp?MessageID=655182&amp;Replies=0</a></p>
+<p>I&rsquo;m sure there are some people who will be very pleased that there is now an easy way to convert Vegas markers to .m4v chapters!</p>
+</div>
+</div>
+</li></ul>
+</li></ul>
+</li><li id="x_x_x_x_x_comment-1001">
+<div>
+<div><span><strong>Mark</strong></span>
+<div>May 17, 2009 at 3:15 am</div>
+</div>
+<div>
+<p>I finally got around to posting directions for using Drax with .mp4/.m4v movies created in Vegas. Hope it helps someone else.<br>
+<a rel="nofollow" href="http://www.sonycreativesoftware.com/forums/ShowMessage.asp?ForumID=4&MessageID=654294">http://www.sonycreativesoftware.com/forums/ShowMessage.asp?ForumID=4&amp;MessageID=654294</a></p>
+</div>
+</div>
+</li><li id="x_x_x_x_x_comment-993">
+<div>
+<div><span><strong>Herbey</strong></span>
+<div>April 17, 2009 at 7:37 am</div>
+</div>
+<div>
+<p>Hi again :-)<br>
+Just updating my early comment; Fortunately Drax works perfect, and that issue I noticed before (chapters in the wrong spot), wasn&rsquo;t from Drax; The problem is in the iPod Touch itself, because if I click to forward from one chapter to another using my
+ ipod, there is a little delay that makes the chapter begins before the chapter-mark I put using Drax. I figured out that the delay comes from the need for the ipod to find that spot quickly while playing the movie, because sometimes it begins well and sometimes
+ it doesn&rsquo;t.<br>
+Thanks a lot for making things easy for all of us :-)<br>
+Have a nice day</p>
+</div>
+</div>
+<ul>
+<li id="x_x_x_x_x_comment-1003">
+<div>
+<div><span><strong>Stephan</strong></span>
+<div>May 20, 2009 at 12:04 pm</div>
+</div>
+<div>
+<p>Hi Herbey,</p>
+<p>Thank you for your remarks! I&rsquo;m really happy that you like Drax. :-)</p>
+<p>All the best!<br>
+Stephan</p>
+</div>
+</div>
+</li></ul>
+</li><li id="x_x_x_x_x_comment-992">
+<div>
+<div><span><strong>Herbey</strong></span>
+<div>April 17, 2009 at 6:50 am</div>
+</div>
+<div>
+<p>Hi there.<br>
+I tried Drax to add chapters to an mp4 file and I&rsquo;m really impressed how simple it is, but I don&rsquo;t know why I&rsquo;m getting some (not all) chapters in the wrong spots. I optimized the file to m4v, synced with my ipod touch, and the chapters are
+ there, but as I said before, some of them are in the wrong spots. Am I doing something wrong?<br>
+Thanks a lot</p>
+</div>
+</div>
+</li><li id="x_x_x_x_x_comment-991">
+<div>
+<div><span><strong>Stephan</strong></span>
+<div>April 10, 2009 at 12:27 am</div>
+</div>
+<div>
+<p>Now Drax supports a new import/export format (Thanks to Enoch):</p>
+<p><strong>CHAPTERxx=h:m:s.ms<br>
+CHAPTERxxNAME=name</strong></p>
+<p>e.g.</p>
+<p><strong>CHAPTER01=00:00:00.000<br>
+CHAPTER01NAME=Chapter 1</strong></p>
+</div>
+</div>
+</li><li id="x_x_x_x_x_comment-983">
+<div>
+<div><span><strong>Paul</strong></span>
+<div>March 28, 2009 at 12:51 am</div>
+</div>
+<div>
+<p>Any hope for command line/batch mode support?</p>
+</div>
+</div>
+<ul>
+<li id="x_x_x_x_x_comment-986">
+<div>
+<div><span><strong>Stephan</strong></span>
+<div>April 1, 2009 at 5:21 pm</div>
+</div>
+<div>
+<p>Now Drax provides basic command line support:</p>
+<p><em>Import Chapters:</em><br>
+<code>drax.exe /import:&quot;C:\Temp\Chapters.txt&quot; /file:&quot;C:\Temp\Movie.m4v&quot;</code></p>
+<p><em>Export Chapters:</em><br>
+<code>drax.exe /export:&quot;C:\Temp\Chapters.txt&quot; /file:&quot;C:\Temp\Movie.m4v&quot;</code></p>
+<p>The tool uses the GPAC MP4BOX Time Code Format (one chapter per line): <strong>
+h:m:s.ms name</strong> e.g. <strong>01:30:15.123 My Chapter</strong></p>
+<p>Hope this helps!</p>
+</div>
+</div>
+</li></ul>
+</li><li id="x_x_x_x_x_comment-979">
+<div>
+<div><span><strong>FiMa</strong></span>
+<div>March 19, 2009 at 11:04 am</div>
+</div>
+<div>
+<p>Just have tried to use the tool. Uploaded a simple .mp4 video and tried to add video chapters (Chapters tab). Then saved the video, but can&rsquo;t find chapters in the output file. Have verified in Handbrake &ndash; no chapters. Could you please clarify
+ it for me?</p>
+<p>Thanks in advance!</p>
+</div>
+</div>
+<ul>
+<li id="x_x_x_x_x_comment-980">
+<div>
+<div><span><strong>Stephan</strong></span>
+<div>March 19, 2009 at 11:09 am</div>
+</div>
+<div>
+<p>Please rename your file from .mp4 to .m4v and check it using VLC or QuickTime. Hope this helps!</p>
+<p>&ndash; Stephan</p>
+</div>
+</div>
+<ul>
+<li id="x_x_x_x_x_comment-981">
+<div>
+<div><span><strong>FiMa</strong></span>
+<div>March 19, 2009 at 11:25 am</div>
+</div>
+<div>
+<blockquote>
+<p>Please rename your file from .mp4 to .m4v and check it using VLC or QuickTime. Hope this helps!</p>
+</blockquote>
+<p>Stephan, you are my hero! I&rsquo;ve been trying to add chapters to video for about 3 days already. Thanks!!!</p>
+<p>Maksim.</p>
+</div>
+</div>
+<ul>
+<li id="x_x_x_x_x_comment-982">
+<div>
+<div><span><strong>Stephan</strong></span>
+<div>March 19, 2009 at 11:28 am</div>
+</div>
+<div>
+<p>You&rsquo;re welcome! :-)</p>
+</div>
+</div>
+</li></ul>
+</li></ul>
+</li></ul>
+</li><li id="x_x_x_x_x_comment-971">
+<div>
+<div><span><strong>Ken</strong></span>
+<div>March 6, 2009 at 11:40 pm</div>
+</div>
+<div>
+<p>Hi, any way to get this to work on adding chapter marks on audio only files (m4a)?</p>
+</div>
+</div>
+<ul>
+<li id="x_x_x_x_x_comment-972">
+<div>
+<div><span><strong>Stephan</strong></span>
+<div>March 7, 2009 at 2:03 am</div>
+</div>
+<div>
+<p>Yes! The latest release of Drax (Version 1.3) can handle it. :-)</p>
+</div>
+</div>
+<ul>
+<li id="x_x_x_x_x_comment-974">
+<div>
+<div><span><strong>Ken</strong></span>
+<div>March 7, 2009 at 2:30 am</div>
+</div>
+<div>
+<p>And pictures :-)</p>
+</div>
+</div>
+<ul>
+<li id="x_x_x_x_x_comment-976">
+<div>
+<div><span><strong>Stephan</strong></span>
+<div>March 7, 2009 at 11:13 am</div>
+</div>
+<div>
+<p>Yeah! Chapter markers for pictures are scheduled for the upcoming release. :-)</p>
+</div>
+</div>
+</li></ul>
+</li></ul>
+</li></ul>
+</li><li id="x_x_x_x_x_comment-968">
+<div>
+<div><span><strong>Mark</strong></span>
+<div>March 5, 2009 at 6:14 pm</div>
+</div>
+<div>
+<p>I was looking for a way to add titled chapter points to AVC files created in Vegas, and you provided the perfect solution! (I tried MetaX for Windows, but it put all the chapters in the wrong spots.)</p>
+<p>One little request, with all respect for your efforts, how difficult would it be to recognize markers already in a rendered .mp4 and write them out as chapters with your utility? I could send you a sample clip with markers if you have a chance to look at
+ it at some point.</p>
+<p>Again, thanks for a simple, nice working utility!</p>
+</div>
+</div>
+<ul>
+<li id="x_x_x_x_x_comment-969">
+<div>
+<div><span><strong>Stephan</strong></span>
+<div>March 5, 2009 at 11:50 pm</div>
+</div>
+<div>
+<p>Thank you! I&rsquo;m really happy that you like Drax. :-)</p>
+<p>What do you mean with &ldquo;to recognize markers already in a rendered .mp4&Prime;? I suppose that, if you just rename the file from .mp4 to .m4v, Drax will detect the existing chapter markers. But I&rsquo;m not absolutely sure about that. And yes, of course,
+ you can send me a sample clip. I&rsquo;ll go over that issue soon!</p>
+</div>
+</div>
+<ul>
+<li id="x_x_x_x_x_comment-970">
+<div>
+<div><span><strong>Mark</strong></span>
+<div>March 6, 2009 at 1:18 am</div>
+</div>
+<div>
+<p>Yes, the markers are in the rendered file metadata, but they must be slightly different because when I rename the file to .m4v, they don&rsquo;t show up as chapters in Drax, or in Quicktime or VLC players.</p>
+<p>I was able to export the markers, alter slightly, and reimport as a text file in Drax which works. Thanks for that Feature!</p>
+<p>I will send you a short clip with some markers rendered in Vegas as .mp4, maybe you can determine what is different about them. I&rsquo;m not a metadata expert, but I sure like the versatility of your program.</p>
+</div>
+</div>
+<ul>
+<li id="x_x_x_x_x_comment-973">
+<div>
+<div><span><strong>Stephan</strong></span>
+<div>March 6, 2009 at 7:06 pm</div>
+</div>
+<div>
+<p>Thank you for your donation!! :-)</p>
+<p>Vegas stores chapter markers not in the usual way: Typically chapter markers are mapped in a seperate text track beside the video and the audio track(s). So VLC and Quicktime (and iTunes, iPod, etc.) can detect and display these markers.<br>
+Chapter Markers that have been set by Vegas are mapped in a so-called &ldquo;custom uuid atom&rdquo; within a .mp4 file. This &ldquo;atom&rdquo; allows user-defined extensions or, in other words, user-defined meta tags, most likely to hide DRM information or
+ any other en-/decryption stuff.</p>
+<p>On the one hand it&rsquo;s possible to read out the atom. On the other hand it seems that there&rsquo;s no direct way to interpret the extracted user-defined atom, because it&rsquo;s only known by the author. The problem is that it&rsquo;s really hard to
+ find a generic approach / an algorithm that can reliably read out the chapters even if the file size, chapter count and so on has been changed. There are so many &ldquo;unknown bytes&rdquo; within the entire atom that have to be reverse engineered. I know
+ it sounds pretty technical. I hope you can see that I can&rsquo;t deliver these modifications to Drax &ndash; so far. :-(</p>
+</div>
+</div>
+<ul>
+<li id="x_x_x_x_x_comment-975">
+<div>
+<div><span><strong>Mark</strong></span>
+<div>March 7, 2009 at 3:39 am</div>
+</div>
+<div>
+<p>That&rsquo;s OK and it makes sense, knowing Sony&rsquo;s approach over the years.<br>
+What I can do is export the markers in Vegas, alter them a bit, and save as a .txt file that Drax will read in as chapters. Not a lot of extra work, really.<br>
+Thanks again, I will look forward to future releases. It does just what I need now (yes, images would be cool) ;?)</p>
+</div>
+</div>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li><li id="x_x_x_x_x_comment-961">
+<div>
+<div><span><strong>Ken</strong></span>
+<div>February 18, 2009 at 9:09 pm</div>
+</div>
+<div>
+<p>Great Tool!! Thanks!</p>
+<p>When I use this to add chapter names, I can see the names in both QuickTime and iTunes, but on my iPod is still says &ldquo;Chapter 1&Prime;, &ldquo;Chapter 2&Prime;, etc.. Any thoughts? Also, are you planning on making the source available?</p>
+</div>
+</div>
+<ul>
+<li id="x_x_x_x_x_comment-962">
+<div>
+<div><span><strong>Stephan</strong></span>
+<div>February 18, 2009 at 9:28 pm</div>
+</div>
+<div>
+<p>Thank You! :-)</p>
+<p>You can see the chapter names both in QuickTime and iTunes because iTunes uses QuickTime for all playback purposes. However, I&rsquo;m really wondering why your iPod displays &ldquo;Chapter 1&Prime; etc.!? In fact, Drax completely replaces the initial (and
+ probably Handbrake-created) chapter names by your own chapter names. So, have you really synchronized the entire movie? Well, a stupid question ;-) . And does your iPod have chapter support? What&rsquo;s your iPod model?</p>
+</div>
+</div>
+<ul>
+<li id="x_x_x_x_x_comment-966">
+<div>
+<div><span><strong>Ken</strong></span>
+<div>February 23, 2009 at 9:33 pm</div>
+</div>
+<div>
+<p>I have the 160GB iPod Classic, so yes it supports chapter names. So I deleted the movie from iTunes and did a sync. I then added it back to iTunes and did a sync. Same problem&hellip; I then enabled disk mode and searched for the movie on my iPod (found
+ it by size). I opened the file directly off of the iPod in QuickTime and sure enough the chapter names were there&hellip; So then I re-formated my iPod (did a restore). Now the chapter names are there. Strange&hellip;</p>
+</div>
+</div>
+<ul>
+<li id="x_x_x_x_x_comment-967">
+<div>
+<div><span><strong>Stephan</strong></span>
+<div>February 24, 2009 at 1:30 pm</div>
+</div>
+<div>
+<p>First of all, thank you for your donation!! :-)</p>
+<p>Actually it&rsquo;s a bit strange: If I modify the chapter names in a movie that is already managed by iTunes, the movie will be detected as &ldquo;changed&rdquo; and automatically &ldquo;re-synchronized&rdquo; with my iPhone. Then, the new chapter names
+ are immediately available. Maybe there are probably some differences in how movies are internally handled on a iPod classic and on the iPhone&hellip;!?</p>
+</div>
+</div>
+</li></ul>
+</li></ul>
+</li></ul>
+</li><li id="x_x_x_x_x_comment-955">
+<div>
+<div><span><strong>Hensley Seagle</strong></span>
+<div>February 5, 2009 at 3:50 pm</div>
+</div>
+<div>
+<p>I had ripped a few DVDs using handbrake (lots of overnight runs) not realising that my ipod touch was able to use chapters. I Searched everywhere for a tool to rename the default &ldquo;Chapter 1&Prime; etc and was so happy when I hit upon this nice little
+ tool. Thank you :-)<br>
+p.s. What does File Optimization do?</p>
+</div>
+</div>
+<ul>
+<li id="x_x_x_x_x_comment-956">
+<div>
+<div><span><strong>Stephan</strong></span>
+<div>February 5, 2009 at 4:34 pm</div>
+</div>
+<div>
+<p>Thank you! I was also looking for a tool, but I haven&rsquo;t found any. That&rsquo;s why I decided to develop Drax. :-)</p>
+<p>Btw. File Optimization means an improvement of the file&rsquo;s layout. In other words, the entire file content is written to a brand-new file:
+<a rel="nofollow" href="http://linux.die.net/man/3/mp4optimize">http://linux.die.net/man/3/mp4optimize</a></p>
+</div>
+</div>
+</li></ul>
+</li><li id="x_x_x_x_x_comment-948">
+<div>
+<div><span><strong>Moe H</strong></span>
+<div>January 5, 2009 at 4:06 am</div>
+</div>
+<div>
+<p>I was wondering if it would be possible to add an import and export function for chapter markers? This way chapters markers could be placed inside a text file and then imported insteda of entering each one manually.</p>
+<p>Thanks<br>
+Moe</p>
+</div>
+</div>
+<ul>
+<li id="x_x_x_x_x_comment-950">
+<div>
+<div><span><strong>Stephan</strong></span>
+<div>January 6, 2009 at 4:34 pm</div>
+</div>
+<div>
+<p>Sounds like a good idea! Version 1.2 now has an import and export function (see file menu). It uses the GPAC
+<a rel="nofollow" href="http://gpac.sourceforge.net/doc_mp4box.php">MP4BOX</a> Time Code Format:
+<strong>h:m:s.ms name</strong> e.g. <strong>01:30:15.123 My Chapter</strong></p>
+</div>
+</div>
+</li></ul>
+</li><li id="x_x_x_x_x_comment-946">
+<div>
+<div><span><strong>Nemesis7</strong></span>
+<div>December 29, 2008 at 3:03 am</div>
+</div>
+<div>
+<p>Hey mate!</p>
+<p>Thanks for this great tool. The possibility to have multiple audio and (selectable) subtitle streams with chapter working on the iPhone is great, but right now I go through hell to make it happen. This is what I do:</p>
+<p>- encode movie and audio to a video.h264 and audio.aac file<br>
+- use mp4box to add subs (srt) to a subs.m4v file<br>
+- edit the subs.m4v file in Ultra-Edit and change the text atom to &rsquo;sbtl&rsquo;<br>
+- open Quicktime and import video.h264, audio.aac, chapters.ttxt, subs.m4v<br>
+- set movie properties (languages, alternate streams, chapters) for the streams<br>
+- save the file to movie.mov</p>
+<p>This works and plays fine on my iPhone (selectable audio and subs, incl working chapters)</p>
+<p>Would it be possible to enable Drax to:</p>
+<p>- change stream info (language) so the iPhone recognizes it correctly<br>
+- change atom type (from text to sbtl for example)<br>
+- add multiple audio and subtitle streams (srt) that are selectable</p>
+<p>Please contact me if you need more info.</p>
+<p>Regards,<br>
+Thomas.</p>
+</div>
+</div>
+<ul>
+<li id="x_x_x_x_x_comment-951">
+<div>
+<div><span><strong>Stephan</strong></span>
+<div>December 30, 2008 at 4:50 pm</div>
+</div>
+<div>
+<p>Wow, that reads really well! I absolutely agree with you to have multiple audio and subtitles streams working on the iPhone. Maybe it works even on Apple TV, too!?</p>
+<p>I will try to figure out whether <em>libmp4v2</em> can modify stream info and/or atom types. So please stay tuned! :-)</p>
+</div>
+</div>
+</li></ul>
+</li><li id="x_x_x_x_x_comment-945">
+<div>
+<div><span><strong>Hayloft</strong></span>
+<div>December 28, 2008 at 11:16 pm</div>
+</div>
+<div>
+<p>I ran this program on my Mac under Parallels 4. It&rsquo;s great!<br>
+Any chance of compiling an installer to run natively on the Mac?</p>
+<p>Thanks</p>
+</div>
+</div>
+<ul>
+<li id="x_x_x_x_x_comment-947">
+<div>
+<div><span><strong>Stephan</strong></span>
+<div>December 28, 2008 at 11:28 pm</div>
+</div>
+<div>
+<p>That&rsquo;s really difficult, because it&rsquo;s a pure Windows program based on the Microsoft Foundation Classes (MFC). Do you know MetaX? It runs natively on Mac and supports chapter handling as well!</p>
+</div>
+</div>
+</li></ul>
+</li><li id="x_x_x_x_x_comment-941">
+<div>
+<div><span><strong>Giuliano</strong></span>
+<div>December 19, 2008 at 1:13 am</div>
+</div>
+<div>
+<p>i open it and it says &ldquo;the application failed to start because its side-by-side configuration is incorrect. please see the application event log for more detail.</p>
+</div>
+</div>
+<ul>
+<li id="x_x_x_x_x_comment-942">
+<div>
+<div><span><strong>Stephan</strong></span>
+<div>December 19, 2008 at 1:27 am</div>
+</div>
+<div>
+<p>Just download and install the prerequisites above and it should work. An installer is coming soon. :-)</p>
+</div>
+</div>
+</li></ul>
+</li><li id="x_x_x_x_x_comment-940">
+<div>
+<div><span><strong>Chris</strong></span>
+<div>December 15, 2008 at 8:37 pm</div>
+</div>
+<div>
+<p>Would be VERY nice if it can add chapter markers to large m4v files to accommodate High Def movies. Perhaps a bigger buffer? Typical HD movies range from 3 to 8 Gb depending on movie length &amp; bitrates.</p>
+<p>Great work here!</p>
+<p>Useful tool for adding &amp; naming the chapters.</p>
+</div>
+</div>
+<ul>
+<li id="x_x_x_x_x_comment-944">
+<div>
+<div><span><strong>Stephan</strong></span>
+<div>December 15, 2008 at 8:51 pm</div>
+</div>
+<div>
+<p>Large File Support, File Optimization and an Installer is coming soon. :-)</p>
+<p><strong>Update:</strong> These features are now available (see version 1.1).</p>
+</div>
+</div>
+</li></ul>
+</li><li id="x_x_x_x_x_comment-936">
+<div>
+<div><span><strong>Ed</strong></span>
+<div>December 5, 2008 at 8:45 pm</div>
+</div>
+<div>
+<p>What version of mp4v2?</p>
+</div>
+</div>
+<ul>
+<li id="x_x_x_x_x_comment-937">
+<div>
+<div><span><strong>Stephan</strong></span>
+<div>December 5, 2008 at 9:08 pm</div>
+</div>
+<div>
+<p>The latest version used in the Handbrake project (including all patches).</p>
+</div>
+</div>
+</li></ul>
+</li><li id="x_x_x_x_x_comment-19242">
+<div>
+<div><span><strong>Stephan</strong></span>
+<div>January 24, 2011 at 10:20 am</div>
+</div>
+<div>
+<p>Sorry. Due to other projects, I didn&rsquo;t have time to work on it. :-(</p>
+<p>&ndash; Stephan</p>
+</div>
+</div>
+</li></ul>
+</div><div class="ClearBoth"></div>
