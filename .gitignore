@@ -3,3 +3,6 @@
 ################################################################################
 
 /trunk/src/.vs/drax/v16
+/trunk/bin
+/trunk/src/drax/Debug
+/trunk/src/drax/Release

@@ -72,12 +72,11 @@ int AfxStringToUtf8(const CString &psString, char *&ppszString);
 #define ASSERT_VALID_PTR(p) ASSERT(VALID_PTR(p))
 #define DELETE_S(p)         if (VALID_PTR(p)) delete [] p;
 
-
 //////////////////////////////////////////////////////////////////////////////
 // donation
 //////////////////////////////////////////////////////////////////////////////
 
-#define DONATION_URL    _T("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=1351080")
+#define DONATION_URL    _T("https://www.paypal.com/donate/?hosted_button_id=P2KR838VXL4T6")
 #define DONATION_TRIALS 3
 
 BOOL AfxIsDonated();
@@ -88,3 +87,11 @@ void AfxSetDonated(BOOL pbDonated = DONATION_TRIALS);
 #else
 #define ATOI atoi
 #endif
+
+//////////////////////////////////////////////////////////////////////////////
+// Debug
+//////////////////////////////////////////////////////////////////////////////
+
+/*#define _CRTDBG_MAP_ALLOC
+#include <stdlib.h>
+#include <crtdbg.h>*/

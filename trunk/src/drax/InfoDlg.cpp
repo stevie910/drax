@@ -37,7 +37,7 @@ BOOL CInfoDlg::OnInitDialog()
 		return FALSE;
 
 	// set URLs
-	m_wndSite.SetURL(_T("http://drax.codeplex.com/"));
+	m_wndSite.SetURL(_T("https://github.com/stevie910/drax"));
 	m_wndDonate.SetURL(DONATION_URL);
 
 	return TRUE;
